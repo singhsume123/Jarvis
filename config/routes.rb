@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'advisor/index'
+
   get 'high/index'
 
   get 'middle/index'
