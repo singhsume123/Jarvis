@@ -1,17 +1,74 @@
 
 <body>
+  <div id="upper_banner_bg">
+			<div id="upper_banner"><img src="http://spark.tamu.edu/Expo_upper_banner.jpg">
+			</div>
+			
+			<div id="nav_bar_bg"></div>
+			<div id="expo_logo_bg" class="">
+				<div class="nav">
+				<a href="http://spark.tamu.edu/index.html"><img id="expo_logo" src="http://spark.tamu.edu/spark_logo_web.png" height="90px" width="183px"></a>
+				</div>
+				<div class="nav">
+				<div id="cssmenu">
+					<ul>
+					   <li class="active"><a href="http://spark.tamu.edu/index.html"><span>Home</span></a></li>
+  						
+   						<li class="has-sub"><a href="#"><span>Competitions</span></a>
+     						<ul>
+        						<li><a href="http://spark.tamu.edu/elementary_school.html"><span>Elementary School</span></a></li>
+         						<li><a href="http://spark.tamu.edu/middle_school.html"><span>Middle School</span></a></li>
+         						<li class="last"><a href="http://spark.tamu.edu/high_school.html"><span>High School</span></a></li>
+                                 <li><a href="http://spark.tamu.edu/high_prebuilt.html"><span>High School Prebuilt</span></a></li>
+      						</ul>
+   						</li>
+   						<li class="has-sub"><a href="#"><span>Itinerary</span></a>
+                            <ul>
+                                <li><a href="/itinerary_elementary_middle.html"><span>Elementary/Middle</span></a></li>
+                                <li><a href="/itinerary_high.html"><span>High School</span></a></li>
+                            </ul>
+   						</li>
+						<li class="last"><a><span>About</span></a>
+     						<ul>
+        						<li><a href="http://spark.tamu.edu/about_expo.html"><span>About Spark</span></a></li>
+         						<li><a href="http://spark.tamu.edu/contact_us.html"><span>Contact Us</span></a></li>
+         						<li class="last"><a href="http://spark.tamu.edu/FAQ.html"><span>FAQ</span></a></li>
+      						</ul>
+   						</li>
+
+					</ul>
+				</div>
+				
+				</div>
+				<div class="bg-gradient" id="countdown_div"></div>
+  					<div class="container">
+    				<div id="CDT"><span class="number-wrapper"><div class="line"></div><div class="caption">DAYS</div><span class="number day">222</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">HOURS</div><span class="number hour">1</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">MINS</div><span class="number min">47</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">SECS</div><span class="number sec">57</span></span></div>
+  				</div>
+			</div>
+			
+		</div>
+
+
   <div id="body_bg">
-    <div id ="main content">
-        <div id = "title"><h1>SPARK Registration</h1></div>
+    <div id="main content">
+        <div id="title"><h1>SPARK Registration</h1></div>
         <p>Please choose what level of school you are in. <br>If you are an advisor you can create a login to ...</p>
         <br>
-        <%= link_to "Elementary School Registration", elementary_index_path, :class => "button" %>
-        <br>
-        <%= link_to "Middle School Registration", middle_index_path, :class => "button" %>
-        <br>
-        <%= link_to "High School Registration", high_index_path, :class => "button" %>
-        <br>
-        <%= link_to "Advisor Registration", advisor_index_path, :class => "button" %>
+        <a class="button" href="/advisor/index">Advisor Registration</a>
+        <div id="school_button_contain">
+          <a href="/elementary/index">
+            <div class="school_buttons">Elementary School Registration</div>
+          </a>
+          <a href="/middle/index">
+            <div class="school_buttons">Middle School Registration</div>
+          </a>
+          <a href="/high/index">
+            <div class="school_buttons">High School Registration</div>
+          </a>
+      </div>
+    
+     
+          
     </div>  
     		<div id="bottom_contact_us_div">
   				<div id="bottom_contact_us_FAQ">
@@ -23,5 +80,8 @@
   				</div>
   			</div>
   </div>
-</body>
+
+
+
+</body></html>
   
