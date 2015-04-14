@@ -1,0 +1,10 @@
+<h1>SPARK Registration</h1>
+<p>Please choose what level of school you are in. <br>If you are an advisor you can create a login to ...</p>
+<br>
+<%= link_to "Elementary School Registration", elementary_index_path, :class => "button" %>
+<br>
+<%= link_to "Middle School Registration", middle_index_path, :class => "button" %>
+<br>
+<%= link_to "High School Registration", high_index_path, :class => "button" %>
+<br>
+<%= link_to "Advisor Registration", advisor_index_path, :class => "button" %>
