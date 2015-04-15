@@ -7,7 +7,7 @@ class CreateAdvisorUsers < ActiveRecord::Migration
       t.string :school_level
       t.string :school_name
       #t.array :students_users
-      #t.string :password
+      t.string :password
 
       t.timestamps null: false
     end

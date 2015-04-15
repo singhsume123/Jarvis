@@ -1,7 +1,260 @@
 {
   "MiniTest": {
     "coverage": {
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/controllers/advisor_users_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/controllers/elementary_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/controllers/high_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/controllers/middle_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/controllers/registration_home_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/models/advisor_user_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        5,
+        5,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        5,
+        5,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/test/models/post_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/models/post.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/models/advisor_user.rb": [
+        1,
+        2,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/registration_home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/advisor_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/advisor_users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/elementary_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/high_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/middle_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/helpers/registration_home_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/high_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/middle_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/elementary_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/jake/RoR/databasetests/AdvisorLogin/app/controllers/advisor_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ]
     },
-    "timestamp": 1428598175
+    "timestamp": 1429061880
   }
 }

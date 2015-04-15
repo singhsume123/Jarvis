@@ -302,3 +302,790 @@ Processing by AdvisorUsersController#index as HTML
   [1m[36mAdvisorUser Load (1.1ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
   Rendered advisor_users/index.html.erb within layouts/application (9.8ms)
 Completed 200 OK in 402ms (Views: 394.7ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (13.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (23.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 16:32:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.8ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 575ms (Views: 532.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:58 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:59 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:59 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:59 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 16:32:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-14 16:33:05 -0500
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 388ms (Views: 386.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 16:33:06 -0500
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 16:33:09 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.8ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 366ms (Views: 362.1ms | ActiveRecord: 1.8ms)
+  [1m[36m (1.1ms)[0m  [1mDROP DATABASE IF EXISTS "testapp_test"[0m
+  [1m[35m (1214.9ms)[0m  CREATE DATABASE "testapp_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (38.5ms)[0m  CREATE TABLE "advisor_users" ("id" serial primary key, "username" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (24.0ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (12.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (13.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (1.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (4.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150407211106')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-14 17:49:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 519ms (Views: 491.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:23 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:49:24 -0500
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:49:31 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.8ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 396ms (Views: 383.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-14 17:49:40 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (67.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (83.3ms)
+Completed 200 OK in 407ms (Views: 381.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-14 17:50:24 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (4.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 343ms (Views: 340.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SVDoqRoDWTtaZ4bxdi5Giy47IV9vepdHypQkQzGE3OgJDq7wmgzgs8No6as+Lc3lek1QpwQ9Kn6NGfVRZNUuhA==", "advisor_user"=>{"username"=>"ijefas", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "advisor_users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "ijefas"], ["password", "ajsdklfj"], ["created_at", "2015-04-14 22:50:31.249413"], ["updated_at", "2015-04-14 22:50:31.249413"]]
+  [1m[36m (19.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/advisor_users/2
+Completed 302 Found in 64ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/advisor_users/2" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdvisorUser Load (1.8ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered advisor_users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 365ms (Views: 334.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:31 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:50:32 -0500
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:50:39 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.3ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 392ms (Views: 388.7ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/advisor_users/2" for 127.0.0.1 at 2015-04-14 17:51:05 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mtWZANALG8W/I7GAlHZZVkVRzgOREDK/AKFXu+JBrovai99ZUASiTSYs3trcddI4ESe/+/pXj4ZHLIaptxBc5w==", "id"=>"2"}
+  [1m[35mAdvisorUser Load (5.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1  [["id", 2]]
+  [1m[36m (4.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 25ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:51:05 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 325ms (Views: 321.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:06 -0500
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-14 17:51:24 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (5.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 358ms (Views: 355.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-14 17:51:38 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5z88JBDKTGPUcAoxMNMOQ4zxR6bKUWkvstNDZHbOxAKnYXp9kMX1601/ZWt40IUt2Ic2XqEW1Bb1XpJ2I582bg==", "advisor_user"=>{"username"=>"alkjsdf", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "advisor_users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "alkjsdf"], ["password", "sdklfjalksdj"], ["created_at", "2015-04-14 22:51:38.875879"], ["updated_at", "2015-04-14 22:51:38.875879"]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/advisor_users/3
+Completed 302 Found in 31ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/advisor_users/3" for 127.0.0.1 at 2015-04-14 17:51:38 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAdvisorUser Load (1.0ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered advisor_users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 306ms (Views: 301.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:51:39 -0500
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:51:43 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.2ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 351ms (Views: 347.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-14 17:52:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 609ms (Views: 578.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:52:04 -0500
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:52:06 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (2.1ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 413ms (Views: 391.9ms | ActiveRecord: 11.5ms)
+
+
+Started DELETE "/advisor_users/3" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P9U0B+TUcdSvqQBwiW3Mxn0ZOpVB02+dYxZEUAjoTCN/i3JeZNvIXDambyrBbkeoKW9LbSqU0qQkm5VCXbm+Tw==", "id"=>"3"}
+  [1m[36mAdvisorUser Load (1.0ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 69ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.1ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 322ms (Views: 318.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/advisor-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/advisor_users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/elementary-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/high-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/scaffolds-d9e0126d32be9a1ed41edaf88c7dd16b.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/middle-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/registration_home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/application-8968c10be42c6876e4257f6c24b077d1.css?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/advisor-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:09 -0500
+
+
+Started GET "/assets/advisor_users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/elementary-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/high-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/middle-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/posts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/registration_home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+
+
+Started GET "/assets/application-8f34646099c05e616d7129dde129b08a.js?body=1" for 127.0.0.1 at 2015-04-14 17:53:10 -0500
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.5ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToUsersUsername (20150414235734)
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (19.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_advisor_users_on_username" ON "advisor_users"  ("username")[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150414235734"]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (11.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (10.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordToAdvisorUsers (20150415004305)
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36m (5.2ms)[0m  [1mALTER TABLE "advisor_users" ADD "password" character varying[0m
+PG::DuplicateColumn: ERROR:  column "password" of relation "advisor_users" already exists
+: ALTER TABLE "advisor_users" ADD "password" character varying
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordToAdvisorUsers (20150415004305)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mALTER TABLE "advisor_users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150415004305"]]
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (4.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('mhartl@example.com') LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "mhartl@example.com"], ["password_digest", "$2a$10$z5PO7w45CbISic7KVcNSGujIzPT07MJmjfaqZdITs9W1L5SuBjEEm"], ["created_at", "2015-04-15 01:25:51.935145"], ["updated_at", "2015-04-15 01:25:51.935145"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (3.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('mhartl@example.com') LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "mhartl@example.com"], ["password_digest", "$2a$10$IGSXuNVSXlGALAncO22fueBIxzM17MVsjoGGNZ2perybqeMrNjkOy"], ["created_at", "2015-04-15 01:37:03.579794"], ["updated_at", "2015-04-15 01:37:03.579794"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (12.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (9.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (3.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('mhartl@example.com') LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "mhartl@example.com"], ["password_digest", "$2a$10$BNy8ymud3ckJcg1NwShZQejxN6qY6WEo5NOKV3ILMnDhaob/Jrk6."], ["created_at", "2015-04-15 01:39:19.883121"], ["updated_at", "2015-04-15 01:39:19.883121"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Load (5.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."email" = 'mhartl@example.com' LIMIT 1
+PG::UndefinedColumn: ERROR:  column advisor_users.email does not exist
+LINE 1: ...ECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_u...
+                                                             ^
+: SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."email" = 'mhartl@example.com' LIMIT 1
+PG::InFailedSqlTransaction: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+: SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1
+PG::InFailedSqlTransaction: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+: SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1
+  [1m[36m (2.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+PG::InFailedSqlTransaction: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+: SAVEPOINT active_record_1
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (3.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('mhartl@example.com') LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "mhartl@example.com"], ["password_digest", "$2a$10$/ipfKgS0pcqj3NYwMdwD5exM4MxT5vpw0hRB89NCTmeywlAACJuCW"], ["created_at", "2015-04-15 01:43:55.929482"], ["updated_at", "2015-04-15 01:43:55.929482"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Load (1.2ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "mhartl@example.com"]]
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m

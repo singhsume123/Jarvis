@@ -4,7 +4,7 @@ class AdvisorUsersControllerTest < ActionController::TestCase
   setup do
     @advisor_user = advisor_users(:one)
   end
-=begin
+
   test "should get index" do
     get :index
     assert_response :success
@@ -45,7 +45,5 @@ class AdvisorUsersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to advisor_users_path
-
   end
-=end
 end

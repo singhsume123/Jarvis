@@ -1,0 +1,5 @@
+class AddIndexToUsersUsername < ActiveRecord::Migration
+  def change
+    add_index :advisor_users, :username, unique: true
+  end
+end
