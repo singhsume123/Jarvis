@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<h1>Advisor#Index</h1>
+<p>Find me in app/views/advisor/index.html.erb</p>
+</head>
+
+<body>
+
+<form action="action_page.php">
+<fieldset>
+<legend>Personal information:</legend>
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit"></fieldset>
+</form>
+ 
+<%= link_to 'New Advisor Registration', advisor_users_path, :class => "button" %>
+
+</body>
+
+</head>
+
+</html>
