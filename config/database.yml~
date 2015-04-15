@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: testapp_development
-  username: jake
+  username: zlewis
   password:
   
 
@@ -61,7 +61,7 @@ development:
 test:
   <<: *default
   database: testapp_test
-  username: jake
+  username: zlewis
   password:
 
 # As with config/secrets.yml, you never want to store sensitive information,
