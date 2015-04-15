@@ -61,7 +61,11 @@ development:
 test:
   <<: *default
   database: testapp_test
+<<<<<<< HEAD
   username: zlewis
+=======
+  username: jake
+>>>>>>> advisor_front_end
   password:
 
 # As with config/secrets.yml, you never want to store sensitive information,

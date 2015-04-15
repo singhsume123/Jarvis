@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :advisor_users
   get 'advisor/index'
 
   get 'high/index'

@@ -1,6 +1,0 @@
-<h1>RegistrationHome#index</h1>
-<p>Find me in app/views/registration_home/index.html.erb</p>
-<br>
-<%= link_to "Elementary School Registration", elementary_index_path, :class => "button" %>
-<br>
-<%= link_to "Middle School Registration", middle_index_path, :class => "button" %>
