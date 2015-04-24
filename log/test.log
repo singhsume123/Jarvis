@@ -1,0 +1,900 @@
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (174.3ms)[0m  [1mDROP DATABASE IF EXISTS "testapp_test"[0m
+  [1m[35m (1239.1ms)[0m  CREATE DATABASE "testapp_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (37.6ms)[0m  CREATE TABLE "advisor_users" ("id" serial primary key, "username" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "first_name" character varying, "last_name" character varying, "pay_code" character varying, "school_level" character varying, "school_name" text) 
+  [1m[36m (11.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_advisor_users_on_username" ON "advisor_users" USING btree ("username")[0m
+  [1m[35m (21.5ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "code" character varying) 
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (9.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (1.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150424043819')
+  [1m[36m (2.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150402041039')[0m
+  [1m[35m (6.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150407211106')
+  [1m[35mActiveRecord::SchemaMigration Load (2.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "posts"[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:13:37', '2015-04-24 16:13:37', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:13:37', '2015-04-24 16:13:37', 298486374)[0m
+  [1m[35mFixture Delete (1.4ms)[0m  DELETE FROM "advisor_users"
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (3.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (2.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (6.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.8ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:16:04', '2015-04-24 16:16:04', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:16:04', '2015-04-24 16:16:04', 298486374)
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (3.9ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (2.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('USER@foo.COM') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('A_US-ER@foo.bar.org') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('first.last@foo.jp') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('alice+bob@baz.cn') LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (2.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "advisor@domain.com"], ["password_digest", "$2a$04$CDQ4JnZKSgBzzSMJCbr0BuCsoXpziyPE7/Rdg9snY5N3Ap33QukVm"], ["created_at", "2015-04-24 16:16:05.124851"], ["updated_at", "2015-04-24 16:16:05.124851"]]
+  [1m[35m (0.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (1.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.8ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:16:46', '2015-04-24 16:16:46', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:16:46', '2015-04-24 16:16:46', 298486374)
+  [1m[36mFixture Delete (1.8ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.2ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (2.8ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[35mAdvisorUser Exists (9.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (9.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (1.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:17:25', '2015-04-24 16:17:25', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:17:25', '2015-04-24 16:17:25', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (1.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (2.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "advisor@domain.com"], ["password_digest", "$2a$04$r3l1LRaA1.ttItnu.zSRJu7TX2yW6qndnv0CjgfCE5va5YreHKWxC"], ["created_at", "2015-04-24 16:17:25.207878"], ["updated_at", "2015-04-24 16:17:25.207878"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('USER@foo.COM') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('A_US-ER@foo.bar.org') LIMIT 1
+  [1m[36mAdvisorUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('first.last@foo.jp') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('alice+bob@baz.cn') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[36mAdvisorUser Exists (2.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (6.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.9ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:18:04', '2015-04-24 16:18:04', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:18:04', '2015-04-24 16:18:04', 298486374)
+  [1m[36mFixture Delete (1.5ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (2.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (3.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (1.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (2.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (12.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (8.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.8ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.7ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:25:11', '2015-04-24 16:25:11', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:25:11', '2015-04-24 16:25:11', 298486374)
+  [1m[36mFixture Delete (1.5ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[36mAdvisorUser Exists (4.8ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  ROLLBACK
+  [1m[36m (2.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[35mAdvisorUser Exists (5.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36mAdvisorUser Exists (5.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (13.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (2.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (1.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[35mAdvisorUser Exists (2.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.5ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.8ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.8ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:26:12', '2015-04-24 16:26:12', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:26:12', '2015-04-24 16:26:12', 298486374)
+  [1m[36mFixture Delete (1.6ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (27.7ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36mAdvisorUser Exists (2.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (7.7ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('USER@foo.COM') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (2.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('A_US-ER@foo.bar.org') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('first.last@foo.jp') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (4.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('alice+bob@baz.cn') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (2.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (9.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (1.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "first_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "advisor@domain.com"], ["password_digest", "$2a$04$t/x3acJ5v3iiDo6Fe09sk.XpnMXZM40PqRx5x.PDkI7XUp5A5E3eO"], ["first_name", "Jake"], ["created_at", "2015-04-24 16:26:12.632225"], ["updated_at", "2015-04-24 16:26:12.632225"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (9.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.6ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:34:33', '2015-04-24 16:34:33', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:34:33', '2015-04-24 16:34:33', 298486374)
+  [1m[36mFixture Delete (1.8ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------
+AdvisorUserTest: test_last_name_should_be_present
+-------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+---------------------------------------------------
+AdvisorUserTest: test_school_name_should_be_present
+---------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+----------------------------------------------------------------------------------------
+AdvisorUserTest: test_assert_true_school_type_should_only_be_Elementary,_Middle,_or_High
+----------------------------------------------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+---------------------------------------------------
+AdvisorUserTest: test_school_type_should_be_present
+---------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_last_name_should_not_be_too_long
+------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------------------------------------
+AdvisorUserTest: test_assert_false_school_type_should_only_be_Elementary,_Middle,_or_High
+-----------------------------------------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+--------------------------------------------------------
+AdvisorUserTest: test_school_name_should_not_be_too_long
+--------------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (2.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:35:23', '2015-04-24 16:35:23', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:35:23', '2015-04-24 16:35:23', 298486374)
+  [1m[36mFixture Delete (1.8ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (4.4ms)[0m  COMMIT
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-------------------------------------------------
+AdvisorUserTest: test_last_name_should_be_present
+-------------------------------------------------
+  [1m[36m (9.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+---------------------------------------------------
+AdvisorUserTest: test_school_name_should_be_present
+---------------------------------------------------
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_last_name_should_not_be_too_long
+------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------------------
+AdvisorUserTest: test_school_name_should_not_be_too_long
+--------------------------------------------------------
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:36:45', '2015-04-24 16:36:45', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:36:45', '2015-04-24 16:36:45', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (14.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('USER@foo.COM') LIMIT 1
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mAdvisorUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('alice+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------
+AdvisorUserTest: test_school_name_should_not_be_too_long
+--------------------------------------------------------
+  [1m[35mAdvisorUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "first_name", "last_name", "school_name", "school_level", "pay_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["username", "advisor@domain.com"], ["password_digest", "$2a$04$rCmUjqnUvpH6uabk4S5pFOy5hFvaoi.DPIE16uSrBii.khDSGG1ea"], ["first_name", "Jake"], ["last_name", "Wier"], ["school_name", "Brooks Wester Middle School"], ["school_level", "Middle"], ["pay_code", "Y1234"], ["created_at", "2015-04-24 16:36:46.189772"], ["updated_at", "2015-04-24 16:36:46.189772"]]
+  [1m[36m (0.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------------------
+AdvisorUserTest: test_last_name_should_be_present
+-------------------------------------------------
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------------------
+AdvisorUserTest: test_school_name_should_be_present
+---------------------------------------------------
+  [1m[35mAdvisorUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_last_name_should_not_be_too_long
+------------------------------------------------------
+  [1m[36mAdvisorUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "advisor_users" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (5.8ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:37:21', '2015-04-24 16:37:21', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-04-24 16:37:21', '2015-04-24 16:37:21', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "advisor_users"[0m
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "advisor_users" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------------
+AdvisorUserTest: test_last_name_should_not_be_too_long
+------------------------------------------------------
+  [1m[36mAdvisorUser Exists (5.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+AdvisorUserTest: test_school_level_should_be_present
+----------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------
+AdvisorUserTest: test_username_should_not_be_too_long
+-----------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.6ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (2.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+AdvisorUserTest: test_first_name_should_be_present
+--------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+-----------------------------------------------------------
+AdvisorUserTest: test_password_should_have_a_minimum_length
+-----------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+AdvisorUserTest: test_email_addresses_should_be_unique
+------------------------------------------------------
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "first_name", "last_name", "school_name", "school_level", "pay_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["username", "advisor@domain.com"], ["password_digest", "$2a$04$5Zx4NX0mjP5mM1LcW9unieFGj1OnTWh8bg92.w/JgZGiPphc93fOC"], ["first_name", "Jake"], ["last_name", "Wier"], ["school_name", "Brooks Wester Middle School"], ["school_level", "Middle"], ["pay_code", "Y1234"], ["created_at", "2015-04-24 16:37:22.103234"], ["updated_at", "2015-04-24 16:37:22.103234"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('ADVISOR@DOMAIN.COM') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+-------------------------------------------------
+AdvisorUserTest: test_last_name_should_be_present
+-------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_reject_invalid_addresses
+-------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example,com') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+---------------------------------------------------
+AdvisorUserTest: test_school_name_should_be_present
+---------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+AdvisorUserTest: test_first_name_should_not_be_too_long
+-------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+AdvisorUserTest: test_username/email_validation_should_accept_valid_addresses
+-----------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('USER@foo.COM') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mAdvisorUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mAdvisorUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('alice+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+AdvisorUserTest: test_username_should_be_present
+------------------------------------------------
+  [1m[35mAdvisorUser Exists (3.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('     ') LIMIT 1
+  [1m[36m (3.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+------------------------------------------------------------------------------------------
+AdvisorUserTest: test_assert_false_school_level_should_only_be_Elementary,_Middle,_or_High
+------------------------------------------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------------------------------
+AdvisorUserTest: test_assert_true_school_level_should_only_be_Elementary,_Middle,_or_High
+-----------------------------------------------------------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------------------
+AdvisorUserTest: test_school_name_should_not_be_too_long
+--------------------------------------------------------
+  [1m[36mAdvisorUser Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AdvisorUserTest: test_Should_Be_Valid
+-------------------------------------
+  [1m[35mAdvisorUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('advisor@domain.com') LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m

@@ -1,8 +1,40 @@
 {
   "MiniTest": {
     "coverage": {
+      "/home/jake/RoR/final/new/Red-Ninja/test/models/post_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/jake/RoR/final/new/Red-Ninja/app/models/post.rb": [
+        1,
+        null
+      ],
+      "/home/jake/RoR/final/new/Red-Ninja/app/models/advisor_user.rb": [
+        1,
+        2,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ]
     },
-    "timestamp": 1428598175
+    "timestamp": 1429893442
   },
   "Unit Tests": {
     "coverage": {
