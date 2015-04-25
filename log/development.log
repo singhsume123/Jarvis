@@ -552,3 +552,1636 @@ Processing by AdvisorUsersController#new as HTML
   Rendered advisor_users/_form.html.erb (6.1ms)
   Rendered advisor_users/new.html.erb within layouts/application (9.6ms)
 Completed 200 OK in 256ms (Views: 253.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:21:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (63.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1645ms (Views: 1517.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:21:53 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:21:53 -0500
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:21:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.2) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.2) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.2) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (155.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (113.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:21:57 -0500
+
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.2) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.2) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.2) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:22:47 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (91.8ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007f7ca6151ce0>:0x007f7ca6151218>):
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+    12:     <% end %>
+    13:     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    14:   </div>
+    15: </div>
+  app/views/sessions/new.html.erb:13:in `_app_views_sessions_new_html_erb___1921951283224041880_70086669385640'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (88.6ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:22:48 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (34.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007f7ca6151ce0>:0x0000000585e0d0>):
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+    12:     <% end %>
+    13:     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    14:   </div>
+    15: </div>
+  app/views/sessions/new.html.erb:13:in `_app_views_sessions_new_html_erb___1921951283224041880_46260140'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:23:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (26.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007f7ca6151ce0>:0x00000005775240>):
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+    12:     <% end %>
+    13:     <!--<p>New user? <%= link_to "Sign up now!", signup_path %></p>-->
+    14:   </div>
+    15: </div>
+  app/views/sessions/new.html.erb:13:in `_app_views_sessions_new_html_erb___1921951283224041880_45807760'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (82.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:23:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (35.6ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007f7ca6151ce0>:0x007f7ca5d4b128>):
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+    12:     <% end %>
+    13:     <!--<p>New user? <%= link_to "Sign up now!", signup_path %></p>-->
+    14:   </div>
+    15: </div>
+  app/views/sessions/new.html.erb:13:in `_app_views_sessions_new_html_erb___1921951283224041880_70086667423660'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (8.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:25:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:14: syntax error, unexpected '<', expecting keyword_end
+  </div>
+   ^
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:15: unknown regexp options - dv
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:16: unterminated string meets end of file
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/sessions/new.html.erb:14: syntax error, unexpected '<', expecting keyword_end
+  app/views/sessions/new.html.erb:15: unknown regexp options - dv
+  app/views/sessions/new.html.erb:16: unterminated string meets end of file
+  app/views/sessions/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (121.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:25:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:14: syntax error, unexpected '<', expecting keyword_end
+  </div>
+   ^
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:15: unknown regexp options - dv
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:16: unterminated string meets end of file
+/home/zlewis/Red-Ninja/app/views/sessions/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/sessions/new.html.erb:14: syntax error, unexpected '<', expecting keyword_end
+  app/views/sessions/new.html.erb:15: unknown regexp options - dv
+  app/views/sessions/new.html.erb:16: unterminated string meets end of file
+  app/views/sessions/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:26:40 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 149ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:26:46 -0500
+
+ActionController::RoutingError (No route matches [POST] "/login"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.2) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.2) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.2) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:32:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 533ms (Views: 511.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:33:01 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 161ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:33:03 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (54.4ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (162.4ms)
+Completed 200 OK in 391ms (Views: 161.3ms | ActiveRecord: 148.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:35:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 610ms (Views: 595.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/advisor_users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/elementary.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/high.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/middle.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/application.self-6afca3cf3fb4e7e5f21e8305579d7cc3bed5a1d10f6db0a91c714a606011cb41.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/registration_home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/scaffolds.self-534846e4352b3c7a506cd8ac20ae154dd8e31a292aca2c2e271b4630184208a1.css?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/advisor.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/advisor_users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/elementary.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/high.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/middle.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/registration_home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/posts.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-04-25 14:35:10 -0500
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:35:11 -0500
+
+ActionController::RoutingError (No route matches [POST] "/login"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.2) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.2) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.2) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (58.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (112.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:35:33 -0500
+
+ActionController::RoutingError (No route matches [POST] "/login"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.2) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.2) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.2) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.2) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (50.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (120.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:36:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H39QXgUi3C07yQEAawVc2hBV76WM0m2OfppbPjO43aLnenKnNI6ks0eX5N62jdhUPmcIsOFKJ7JmTqVCdpoKcA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 205ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:36:29 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H39QXgUi3C07yQEAawVc2hBV76WM0m2OfppbPjO43aLnenKnNI6ks0eX5N62jdhUPmcIsOFKJ7JmTqVCdpoKcA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 183ms (Views: 182.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:40:28 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.8ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 250ms (Views: 233.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/advisor_users/1/edit" for 127.0.0.1 at 2015-04-25 14:40:34 -0500
+Processing by AdvisorUsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvisorUser Load (0.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered advisor_users/_form.html.erb (30.2ms)
+  Rendered advisor_users/edit.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 266ms (Views: 187.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/advisor_users/1" for 127.0.0.1 at 2015-04-25 14:40:42 -0500
+Processing by AdvisorUsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ni1v7I0AghW/TrMD962LoaCUygn9uLJSxtFHUTjg2mBmKE0VvKz6i8MQVt0qJQ8vjqYtHJAg+G7eBbktfcINsg==", "advisor_user"=>{"username"=>"zach", "password"=>"[FILTERED]"}, "commit"=>"Update Advisor user", "id"=>"1"}
+  [1m[35mAdvisorUser Load (2.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.7ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 6.2ms)
+
+NoMethodError (undefined method `password_digest=' for #<AdvisorUser:0x007fc2b9d338e8>):
+  app/controllers/advisor_users_controller.rb:44:in `block in update'
+  app/controllers/advisor_users_controller.rb:43:in `update'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (85.6ms)
+
+
+Started DELETE "/advisor_users/1" for 127.0.0.1 at 2015-04-25 14:40:57 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ab+nQ8bjfGYoDWsCDo31muRRb+yhT5crvike+Ii+QBf5uoW6908E+FRTjtzTBXEUymOI+czX3Rem/eCEzZyXxQ==", "id"=>"1"}
+  [1m[36mAdvisorUser Load (2.4ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (25.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 32ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:40:57 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (0.4ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 216ms (Views: 214.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-25 14:40:58 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (2.1ms)
+  Rendered advisor_users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-25 14:41:05 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BocNfcdpUt11cFr4zc3Lghbtx/qcvMUDohGT9YfHhaX+gi+E9sUqQwkuvyYQRU8MON8g7/Ekjz+6xW2JwuVSdw==", "advisor_user"=>{"username"=>"zach", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `password_digest=' for #<AdvisorUser:0x007fc2ba27ab08>):
+  app/controllers/advisor_users_controller.rb:27:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (83.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:51:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 642ms (Views: 620.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:51:14 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (58.3ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `username_field' for #<ActionView::Helpers::FormBuilder:0x00000004938c40>):
+     5:   <div class="col-md-6 col-md-offset-3">
+     6:     <%= form_for(:session, url: login_path) do |f| %>
+     7:       <%= f.label :username %>
+     8:       <%= f.username_field :username, class: 'form-control' %>
+     9:       <%= f.label :password %>
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+  app/views/sessions/new.html.erb:8:in `block in _app_views_sessions_new_html_erb___2211663496023495427_70328967133080'
+  app/views/sessions/new.html.erb:6:in `_app_views_sessions_new_html_erb___2211663496023495427_70328967133080'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (57.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (113.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:51:14 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (39.1ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `username_field' for #<ActionView::Helpers::FormBuilder:0x007fed7a249068>):
+     5:   <div class="col-md-6 col-md-offset-3">
+     6:     <%= form_for(:session, url: login_path) do |f| %>
+     7:       <%= f.label :username %>
+     8:       <%= f.username_field :username, class: 'form-control' %>
+     9:       <%= f.label :password %>
+    10:       <%= f.password_field :password, class: 'form-control' %>
+    11:       <%= f.submit "Log in", class: "btn btn-primary" %>
+  app/views/sessions/new.html.erb:8:in `block in _app_views_sessions_new_html_erb___2211663496023495427_70328966514660'
+  app/views/sessions/new.html.erb:6:in `_app_views_sessions_new_html_erb___2211663496023495427_70328966514660'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (91.6ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:52:20 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 162ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:52:22 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 203ms (Views: 186.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-25 14:52:23 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (16.7ms)
+  Rendered advisor_users/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 224ms (Views: 210.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-25 14:52:28 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCRfzsODLz1q974upD2f1cMMcblnYldBUurMnkzbMYp4IX038i9XoxapW/B5tRtb7T6WrAr6HX1KPjLiCfnmWA==", "advisor_user"=>{"username"=>"blah", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[36m (3.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (35.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('blah') LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 39.4ms)
+
+NoMethodError (undefined method `first_name' for #<AdvisorUser:0x00000004a58e90>):
+  app/controllers/advisor_users_controller.rb:30:in `block in create'
+  app/controllers/advisor_users_controller.rb:29:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (108.4ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-25 14:53:53 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCRfzsODLz1q974upD2f1cMMcblnYldBUurMnkzbMYp4IX038i9XoxapW/B5tRtb7T6WrAr6HX1KPjLiCfnmWA==", "advisor_user"=>{"username"=>"zach", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (17.3ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "zach"], ["password", "lewis"], ["created_at", "2015-04-25 19:53:53.169260"], ["updated_at", "2015-04-25 19:53:53.169260"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users/2
+Completed 302 Found in 47ms (ActiveRecord: 25.8ms)
+
+
+Started GET "/advisor_users/2" for 127.0.0.1 at 2015-04-25 14:53:53 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvisorUser Load (0.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered advisor_users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 207ms (Views: 194.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:55:48 -0500
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 225ms (Views: 224.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:55:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 159ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:56:04 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (4.8ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 211ms (Views: 200.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/advisor_users/2/edit" for 127.0.0.1 at 2015-04-25 14:56:07 -0500
+Processing by AdvisorUsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvisorUser Load (0.5ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered advisor_users/_form.html.erb (2.3ms)
+  Rendered advisor_users/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 167ms (Views: 163.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/advisor_users/2" for 127.0.0.1 at 2015-04-25 14:56:13 -0500
+Processing by AdvisorUsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mF9rl2B8Odt5E0q4cn+fOstfUnfd7hJvJzYABcMsJyJgWkluUdBBRQVNr2av9xu05W21YrB2WFM/4v55hg7w8A==", "advisor_user"=>{"username"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Update Advisor user", "id"=>"2"}
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "advisor_users" SET "username" = $1, "updated_at" = $2 WHERE "advisor_users"."id" = $3  [["username", "zach@yahoo.com"], ["updated_at", "2015-04-25 19:56:13.977784"], ["id", 2]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/advisor_users/2
+Completed 302 Found in 15ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/advisor_users/2" for 127.0.0.1 at 2015-04-25 14:56:14 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered advisor_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 212ms (Views: 210.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:56:17 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (0.4ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 163ms (Views: 162.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:56:23 -0500
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 193ms (Views: 192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:56:25 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 165ms (Views: 164.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:56:40 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ieHsgC0wIIXeUWcO0seTOF7vnR71mPizjJMXCkSsLoZx5M55HJxYG6IPgtAPTxe2cN16C5gAso+UR+l2AY75VA==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (51.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (102.4ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:57:32 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 193ms (Views: 191.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advisor_users/2" for 127.0.0.1 at 2015-04-25 14:57:36 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvisorUser Load (0.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered advisor_users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 218ms (Views: 215.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 14:57:40 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 163ms (Views: 161.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-25 14:57:50 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (6.5ms)
+  Rendered advisor_users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 154ms (Views: 153.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 14:57:54 -0500
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 224ms (Views: 223.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 14:57:57 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 202ms (Views: 201.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 14:58:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0RqTHnCixRhz69NGxR4hQx+VFpNJJ0m+LPDYuK5BJxEpH7HnQQ69hg+1NpgYlqXNMafxhiS/A4I0JCbE62Pwww==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:01:34 -0500
+
+SyntaxError (/home/zlewis/Red-Ninja/app/controllers/sessions_controller.rb:18: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/sessions_controller.rb:18: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (112.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-25 15:01:35 -0500
+
+SyntaxError (/home/zlewis/Red-Ninja/app/controllers/sessions_controller.rb:18: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/sessions_controller.rb:18: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (4.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (104.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:02:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0RqTHnCixRhz69NGxR4hQx+VFpNJJ0m+LPDYuK5BJxEpH7HnQQ69hg+1NpgYlqXNMafxhiS/A4I0JCbE62Pwww==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 214ms (Views: 212.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 15:07:02 -0500
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 200ms (Views: 199.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 15:07:03 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 180ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 15:07:06 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (3.1ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 189ms (Views: 180.8ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:07:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OijEULRkbAo1rQ4GIgPO+kwNdOXNofiArgjTPlnpusPCLeaphcgUlEnz69j/i0p0Yj+T8KA5sry23C1CHMttEQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (107.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:07:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OijEULRkbAo1rQ4GIgPO+kwNdOXNofiArgjTPlnpusPCLeaphcgUlEnz69j/i0p0Yj+T8KA5sry23C1CHMttEQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (118.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:09:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OijEULRkbAo1rQ4GIgPO+kwNdOXNofiArgjTPlnpusPCLeaphcgUlEnz69j/i0p0Yj+T8KA5sry23C1CHMttEQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (57.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:10:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OijEULRkbAo1rQ4GIgPO+kwNdOXNofiArgjTPlnpusPCLeaphcgUlEnz69j/i0p0Yj+T8KA5sry23C1CHMttEQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (9.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (107.7ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 15:11:01 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.4ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 165ms (Views: 161.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/advisor_users/2" for 127.0.0.1 at 2015-04-25 15:11:02 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvisorUser Load (1.5ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered advisor_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 201ms (Views: 195.7ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "zach"], ["password", "Lewis"], ["created_at", "2015-04-25 20:16:24.853096"], ["updated_at", "2015-04-25 20:16:24.853096"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAdvisorUser Load (0.6ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAdvisorUser Load (0.4ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mAdvisorUser Load (0.5ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAdvisorUser Load (0.6ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAdvisorUser Load (0.8ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1[0m  [["username", "zach"]]
+  [1m[35m (0.7ms)[0m  ROLLBACK
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 15:22:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 654ms (Views: 640.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 15:22:29 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 181ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:22:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hnKDQipC4wqoyJtVxin7WM2C0O6iGMvBS6LEOWQn3Wx+d6G7G+6blNSWfosboX/W47A3+8+Agf1TdjpFIQUKvg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (1.5ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 327ms (Views: 229.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:23:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aHPVyVVLs6M9Ngfi62ZCTKsgSppkImmZj9FtIQ2S/2eQdvcwZOfLPUFo4jw27sbChRKtjwm6I6WXBZNdSLAotQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:23:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aHPVyVVLs6M9Ngfi62ZCTKsgSppkImmZj9FtIQ2S/2eQdvcwZOfLPUFo4jw27sbChRKtjwm6I6WXBZNdSLAotQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (96.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:24:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aHPVyVVLs6M9Ngfi62ZCTKsgSppkImmZj9FtIQ2S/2eQdvcwZOfLPUFo4jw27sbChRKtjwm6I6WXBZNdSLAotQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (0.4ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 249ms (Views: 238.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:24:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zv8SdDedV7DuBLawAseOk22ZltJIjDo7T8lyEHMw1ACe+jCNBjEvLpJaU27fTwodQ6txxyUUcAdXHYxsNhID0g==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 191ms (Views: 186.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:24:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Al4D1EQSyEpu58samGS3EvL+TgG9VEFxRptdsi0JyPH6WyEtdb6w1BK5LsRF7DOc3MypFNDMC01eT6POaCsfIw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (0.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 224ms (Views: 214.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:24:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3YuWwIBCzRjXWURHa8Q9xXl6DFzfv5YpW0eGb2MVsVbcwyiM61zqh8DgM/AJ5R5O9cPJB7mtGS9ueBl+K6BFw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (2.0ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 196ms (Views: 189.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:24:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3+K5spiXjr/f9UMKC0EgH+jJpZ/qFXeSGY6vSwb6Q53eqgf+84mpIMhMNL1pYAOUZHBgxIwH+JQssTBaTk+3A==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (2.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 203ms (Views: 199.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:26:13 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xaI32KmBWMtrEnv6tAz39BsTiwkW4qx3J+aPMZ1JNYI9pxUhmC0gVRdMniRphHN6NSFsHHt65ks/MnFN2GviUA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 208ms (Views: 198.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:28:11 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u1MB8ZKX1DZ/ArgJa8X6TBMLxXYr3u2Op7YyMgaGIzlDViMIozusqANcXde2TX7CPTkiY0ZGp7K/YsxOQ6T06w==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (100.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:29:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u1MB8ZKX1DZ/ArgJa8X6TBMLxXYr3u2Op7YyMgaGIzlDViMIozusqANcXde2TX7CPTkiY0ZGp7K/YsxOQ6T06w==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (0.4ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1[0m  [["username", "zach@yahoo.com"]]
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 227ms (Views: 205.1ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:31:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uxv4SbDmK6m6wbO7hXlBTaNWeu9KG9Ig8RP1Sakl7terHtqwgUpTN8afVmVY8cXDjWSd+ieDmBzpxws17Ac5BQ==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.2ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.1ms)
+
+NoMethodError (undefined method `authenticate' for #<AdvisorUser:0x007fbef983fc60>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:34:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uxv4SbDmK6m6wbO7hXlBTaNWeu9KG9Ig8RP1Sakl7terHtqwgUpTN8afVmVY8cXDjWSd+ieDmBzpxws17Ac5BQ==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (0.8ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1[0m  [["username", "zach@yahoo.com"]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.7ms)
+
+NameError (undefined local variable or method `password_digest' for #<AdvisorUser:0x007fbefa5396c8>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (3.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (86.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:37:57 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uxv4SbDmK6m6wbO7hXlBTaNWeu9KG9Ig8RP1Sakl7terHtqwgUpTN8afVmVY8cXDjWSd+ieDmBzpxws17Ac5BQ==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.2ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.8ms)
+
+NameError (undefined local variable or method `password_digest' for #<AdvisorUser:0x007fbefa522f90>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (6.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (112.6ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (7.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 15:52:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 634ms (Views: 609.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 15:52:05 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 196ms (Views: 195.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:52:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dP7qOXqqKLOz+Ya2XEU2LIiHAyIlbw0JxojQtNIWHfeM+8jASwZQLc+nY2iBzbKiprXkN0j3RzXeXC7IlzTKJQ==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.4ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 5.1ms)
+
+NameError (undefined local variable or method `password_digest' for #<AdvisorUser:0x007fc1fe5aad80>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (110.4ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 15:59:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 629ms (Views: 603.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 15:59:27 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 209ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:59:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XNlfOWBnHVf1u+YYoRXtFoFNGND1MiDxZMuH2u0mBLKk3H3AUctlyYnlA8Z8nWmYr3//xZiqas18H3mmqATTYA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (1.0ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 365ms (Views: 252.8ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 15:59:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jTFNMqfJjOYXjO1O5lIcJYT9uq+/RFAL8cLSujybL591NG/LlmX0eGvSCJA72pirqs9dutLcGjfpFizGebn4TQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdvisorUser Load (2.1ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 330ms (Views: 325.3ms | ActiveRecord: 2.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToAdvisorUsers (20150425211824)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (75.9ms)[0m  [1mALTER TABLE "advisor_users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (9.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150425211824"]]
+  [1m[36m (19.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 16:24:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 622ms (Views: 594.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 16:24:11 -0500
+
+SyntaxError (/home/zlewis/Red-Ninja/app/controllers/sessions_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/sessions_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (32.0ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.4ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 16:24:12 -0500
+
+SyntaxError (/home/zlewis/Red-Ninja/app/controllers/sessions_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/sessions_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (40.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (57.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (104.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 16:24:33 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 253ms (Views: 252.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 16:24:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9uCKU64KCfbokQgvPDH0XABgD3Wp7JEkgfJ7TnehNVEO5aiqn6ZxaJTP7fHhuXDSLlLoYMR02xiZJoUyMoPigw==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.3ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 9.8ms)
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.7ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/zlewis/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (106.2ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Load (0.4ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAdvisorUser Load (0.5ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+  [1m[36mAdvisorUser Load (0.6ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1[0m  [["username", "zach@yahoo.com"]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 16:31:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 641ms (Views: 615.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 16:31:51 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 222ms (Views: 221.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 16:31:53 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.7ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 317ms (Views: 234.3ms | ActiveRecord: 9.7ms)
+
+
+Started DELETE "/advisor_users/2" for 127.0.0.1 at 2015-04-25 16:32:01 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"14uelNpJ3RhKdyXxPRaVMDnWUm/rCoCnQJfGPJjxATovjrxt6+WlhjYpwC/gnhG+F+S1eoaSyptYQzhA3dPW6A==", "id"=>"2"}
+  [1m[36mAdvisorUser Load (0.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.4ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 56ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 16:32:01 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (3.3ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 339ms (Views: 334.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-25 16:32:03 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (33.3ms)
+  Rendered advisor_users/new.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 207ms (Views: 206.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-25 16:32:13 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjwcTnwCFLz/cwFMvLUNFRni6FcmdavYgJW0thQjERCmOT63Ta5sIoMt5JJhPYmbN9APQkvt4eSYQUrKUQHGwg==", "advisor_user"=>{"username"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (14.5ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('zach@yahoo.com') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  Rendered advisor_users/_form.html.erb (16.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 446ms (Views: 205.5ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-25 16:32:26 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXo54c1IOZ06lr+ljaUPpMc9AhQYAZe0RLX0ohHZbEqlfxsY/ORBA0bIWntQLYsq6Q/lAXWZ3YhcYQreVPu7mA==", "advisor_user"=>{"username"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('zach@yahoo.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "zach@yahoo.com"], ["password_digest", "$2a$10$yZy2LUX6R6zfXDWtATjrseZnqQZ2tIIBekZ9hnEfe.15XhF7R82Ca"], ["created_at", "2015-04-25 21:32:26.372938"], ["updated_at", "2015-04-25 21:32:26.372938"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users/4
+Completed 302 Found in 213ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/advisor_users/4" for 127.0.0.1 at 2015-04-25 16:32:26 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvisorUser Load (7.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered advisor_users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 221ms (Views: 212.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 16:32:36 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.1ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 159ms (Views: 157.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/advisor_users/4" for 127.0.0.1 at 2015-04-25 16:32:38 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvisorUser Load (0.4ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered advisor_users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 166ms (Views: 164.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-25 16:32:43 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 161ms (Views: 158.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Load (4.8ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-25 16:34:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 684ms (Views: 667.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-04-25 16:34:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 210ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-25 16:34:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l6imTyQ0YYUCiKi60UvDghQAZPmz6ncsExOcYyrKn8VvrYS2FZgZG37WTWQMw0cMOjKD7N5yPRALx2Ifb+hIFw==", "session"=>{"email"=>"zach@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mAdvisorUser Load (0.6ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."username" = $1 LIMIT 1  [["username", "zach@yahoo.com"]]
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 558ms (Views: 248.1ms | ActiveRecord: 4.8ms)
