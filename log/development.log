@@ -552,3 +552,782 @@ Processing by AdvisorUsersController#new as HTML
   Rendered advisor_users/_form.html.erb (6.1ms)
   Rendered advisor_users/new.html.erb within layouts/application (9.6ms)
 Completed 200 OK in 256ms (Views: 253.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-24 11:51:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 660ms (Views: 634.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/elementary/index" for 127.0.0.1 at 2015-04-24 11:51:15 -0500
+Processing by ElementaryController#index as HTML
+  Rendered elementary/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 309ms (Views: 307.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/high/index" for 127.0.0.1 at 2015-04-24 11:51:22 -0500
+Processing by HighController#index as HTML
+  Rendered high/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 336ms (Views: 334.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-24 11:51:43 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 352ms (Views: 349.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 11:51:47 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (2.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 376ms (Views: 346.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-24 11:51:50 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (58.1ms)
+  Rendered advisor_users/new.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 371ms (Views: 312.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 11:51:55 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fP6kH5Phnwylr5OxBR0djvHlE0R1jFj3X+KYTMUjBSH7iZqYcKhrjMHseE91PNX4HxANJw3amu96VQ/spz4Zg==", "advisor_user"=>{"username"=>"af", "password"=>"[FILTERED]"}, "commit"=>"Create Advisor user"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (2.8ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('af') LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (25.9ms)
+  Rendered advisor_users/new.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 666ms (Views: 282.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 11:52:06 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.2ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 280ms (Views: 276.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 11:58:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.5ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 680ms (Views: 639.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:00:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (2.0ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 677ms (Views: 633.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-24 12:00:57 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (69.9ms)
+  Rendered advisor_users/new.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 436ms (Views: 396.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-24 12:03:07 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (17.2ms)
+  Rendered advisor_users/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 290ms (Views: 285.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/advisor_users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/scaffolds.self-4e7792a22104d2dfb478e5c1a43b3bb6c777832eae8b2099a13cb161efd60552.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/middle.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/registration_home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/high.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/elementary.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/application.self-6afca3cf3fb4e7e5f21e8305579d7cc3bed5a1d10f6db0a91c714a606011cb41.css?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/elementary.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/advisor.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/advisor_users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/high.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/middle.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/posts.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/registration_home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 12:03:08 -0500
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:03:48 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dfV/Kelo2u26OkiU+4GJOrHWPpjDcH/3ejRRmOHeJ2zygkGuCiEubd55o2qLoEFMXyMg+7smve9fg8Y4g8M7w==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"Brooks Wester Middle School", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (2.6ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (23.2ms)
+  Rendered advisor_users/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 761ms (Views: 377.9ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:03:57 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kV0oPkT3OMahrYVZRet0C0EoVOmtP+YsF1pswjtkJ4TPQPTEW3ofFKA8iva8K/MqmpOAkCDevSR3zLKcuuxT9g==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"Broo", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  Rendered advisor_users/_form.html.erb (45.4ms)
+  Rendered advisor_users/new.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 612ms (Views: 290.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:04:05 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6w7yuUAznH11EgFYLZteWpApCzIdPl88XEYQs+1WNNe1Ey5DX767r3SDDvfUW9l7S5LfS5DfBDQ80M7tbN5ApQ==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"Brooks Wester Middle School", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1
+  [1m[36m (2.8ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (17.7ms)
+  Rendered advisor_users/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 577ms (Views: 260.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:04:17 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/nI50rV80GjRJyyFqm5FOrxjeDuAv+vY0PwHoBFhOXx5BQdVVjUk6LVkx3vaT41MUpZmWPjpKcD1S5AAc3wlw==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"BrooksWesterMiddleSchool", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  Rendered advisor_users/_form.html.erb (14.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 620ms (Views: 284.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:04:25 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJOMv8hSFXMhJ0DTxRMThThQfDiiJGgEYxm+K6t/JPPKjlBF198yoSC2T3w805Sk4+uoQS/FMwwDj2B1KvdQgQ==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"BrooksWesterMiddleSchool", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (18.6ms)
+  Rendered advisor_users/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 609ms (Views: 286.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:05:22 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qdBQBo9WQ09tzV3qXZ+CgYnd/8HOhk8GjkMLJ5oMjbr3zYz8kNtknWxcUkWkXwWgUmYruENnFA7u1dV5G4T5yA==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"thisis it as far", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  ROLLBACK
+  Rendered advisor_users/_form.html.erb (11.3ms)
+  Rendered advisor_users/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 399ms (Views: 147.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:06:01 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"keLixf2yB4rdrkEtrqMCKEjtDsqusBTsuazXwIgXNZDP/z4/4j8gWNw/ToJXY4UJk1basyNRT+TZOgmeCZ9B4g==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"afsdfsfdsdf", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "first_name", "last_name", "school_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "jakewier@tamu.edu"], ["password_digest", "$2a$10$7BRFCICR.SzVgCMT3YtDZ.0cH1hgYr/tpbpgiOe5IQ0aLbEyIkbny"], ["first_name", "Jake"], ["last_name", "Wier"], ["school_level", "Middle"], ["created_at", "2015-04-24 17:06:02.431162"], ["updated_at", "2015-04-24 17:06:02.431162"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users/8
+Completed 302 Found in 360ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/advisor_users/8" for 127.0.0.1 at 2015-04-24 12:06:02 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdvisorUser Load (1.1ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered advisor_users/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 283ms (Views: 240.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:06:10 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.0ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 264ms (Views: 260.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/advisor_users/8" for 127.0.0.1 at 2015-04-24 12:06:13 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdvisorUser Load (2.0ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered advisor_users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 261ms (Views: 255.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:06:19 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.1ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 287ms (Views: 283.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/advisor_users/8" for 127.0.0.1 at 2015-04-24 12:06:32 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BRW2gUIzC124139btEqLdzWr2OeIEkPtdDKXaCsFfGNbCGp7Xb4sj7lGcPRNigxW7hAMngXzGOUUpEk2qo0IEQ==", "id"=>"8"}
+  [1m[36mAdvisorUser Load (1.7ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (23.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 41ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:06:32 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (6.8ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 232ms (Views: 223.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-24 12:08:27 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (23.3ms)
+  Rendered advisor_users/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 278ms (Views: 276.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:08:40 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uQ9XcJI4y4BgKYJqiS6H9C/qnMq08SXZZipc2Pgxtuk+eGn3cXE/AARqaZT5D0+CwR+Cqcyn58FDnct4miyqQ==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"j", "last_name"=>"", "school_name"=>"", "school_level"=>""}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  Rendered advisor_users/_form.html.erb (19.4ms)
+  Rendered advisor_users/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 573ms (Views: 261.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:09:01 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8trKIGIQUpkd4P6/KvZBb/i31dd0XZ+7BW10YZaIWJqsxxbafZ11Sxxx8RDTNsZOIwwBrvm8xLNl+6o/FwAs6A==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"", "school_level"=>"sdddd"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (17.5ms)
+  Rendered advisor_users/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 594ms (Views: 271.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-24 12:09:15 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FAaNtEqrCVM35msHWEaaWz9/uODrjWIyvgRqBop9cTNKG1FOVSYugTZ3ZKihhh165MRsmWZsOTrekrRYC/UFQQ==", "advisor_user"=>{"username"=>"jakewier@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"Jake", "last_name"=>"Wier", "school_name"=>"", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mAdvisorUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakewier@tamu.edu') LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "advisor_users" ("username", "password_digest", "first_name", "last_name", "school_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["username", "jakewier@tamu.edu"], ["password_digest", "$2a$10$Pcjia5KrEUb10sKBWjyGi.5FWuD0pClO3hr2.RMyz824pEukuQjpu"], ["first_name", "Jake"], ["last_name", "Wier"], ["school_level", "Middle"], ["created_at", "2015-04-24 17:09:15.451052"], ["updated_at", "2015-04-24 17:09:15.451052"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/advisor_users/9
+Completed 302 Found in 336ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/advisor_users/9" for 127.0.0.1 at 2015-04-24 12:09:15 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mAdvisorUser Load (1.7ms)[0m  SELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1  [["id", 9]]
+  Rendered advisor_users/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 300ms (Views: 295.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/advisor_users/9/edit" for 127.0.0.1 at 2015-04-24 12:10:36 -0500
+Processing by AdvisorUsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAdvisorUser Load (0.9ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered advisor_users/_form.html.erb (12.6ms)
+  Rendered advisor_users/edit.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 279ms (Views: 237.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:10:52 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (5.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 292ms (Views: 285.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-24 12:12:12 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.5ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 296ms (Views: 292.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/advisor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/scaffolds.self-4e7792a22104d2dfb478e5c1a43b3bb6c777832eae8b2099a13cb161efd60552.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/high.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/registration_home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/middle.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/elementary.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/advisor_users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/application.self-6afca3cf3fb4e7e5f21e8305579d7cc3bed5a1d10f6db0a91c714a606011cb41.css?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/advisor.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/advisor_users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/elementary.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/high.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/middle.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/posts.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/registration_home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-04-24 12:12:13 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 08:19:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (18.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 1329ms (Views: 1300.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-29 08:19:43 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 268ms (Views: 266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 08:19:51 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (43.2ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (182.6ms)
+Completed 200 OK in 522ms (Views: 362.7ms | ActiveRecord: 144.8ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 08:20:01 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.4ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 320ms (Views: 316.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-29 08:20:10 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 349ms (Views: 346.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 08:20:18 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (2.0ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 240ms (Views: 235.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 08:20:27 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (220.8ms)
+  Rendered advisor_users/new.html.erb within layouts/application (264.0ms)
+Completed 200 OK in 495ms (Views: 492.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 08:20:49 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (14.0ms)
+  Rendered advisor_users/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 370ms (Views: 316.1ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-29 08:21:24 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L3ajSCYKAZpHIbsaE7CSvfAmN0vCbXC8kqUNaLsNhMMYbP/0eQPQCLuL5JGteoF0QQIJa/wZJioiEnw519ZRYg==", "advisor_user"=>{"username"=>"klajdsklf@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"aklsdjfajksdf", "last_name"=>"alskdjfalksdjf", "school_name"=>"lkasdjfkdfjalsdjf", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (3.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('klajdsklf@tamu.edu') LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (17.0ms)
+  Rendered advisor_users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 647ms (Views: 239.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 08:21:48 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (1.0ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 338ms (Views: 311.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 08:21:51 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (34.8ms)
+  Rendered advisor_users/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 266ms (Views: 263.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-29 08:22:22 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hvdWMOh3gOQByZj8AzPf8NpStpDmZssIIE+D3X8JhOWx7QqMt35Rdv1jx3e9+cw5a3aIsNgSnZ6Q+PKME9JRRA==", "advisor_user"=>{"username"=>"jakljfakslkd@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"alksjdflaksjdfl", "last_name"=>"asldkfjalsdkfj", "school_name"=>"Hello Elementary School", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('jakljfakslkd@tamu.edu') LIMIT 1
+  [1m[36m (2.1ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (13.1ms)
+  Rendered advisor_users/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 609ms (Views: 270.2ms | ActiveRecord: 4.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumnTypeOfSchoolNameAdvisorUsers (20150429133141)
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (40.8ms)[0m  [1mALTER TABLE advisor_users ALTER COLUMN school_name TYPE string USING (latitude::string)[0m
+PG::UndefinedObject: ERROR:  type "string" does not exist
+: ALTER TABLE advisor_users ALTER COLUMN school_name TYPE string USING (latitude::string)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumnTypeOfSchoolNameAdvisorUsers (20150429133141)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mALTER TABLE advisor_users ALTER COLUMN school_name TYPE string USING (school_name::string)[0m
+PG::UndefinedObject: ERROR:  type "string" does not exist
+: ALTER TABLE advisor_users ALTER COLUMN school_name TYPE string USING (school_name::string)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumnTypeOfSchoolNameAdvisorUsers (20150429133141)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (70.0ms)[0m  [1mALTER TABLE advisor_users ALTER COLUMN school_name TYPE varchar USING (school_name::varchar)[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150429133141"]]
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (11.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'advisor_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (11.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 08:41:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 610ms (Views: 557.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-29 08:41:08 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 342ms (Views: 339.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 08:41:11 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (3.4ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 372ms (Views: 341.9ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 08:41:14 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (63.2ms)
+  Rendered advisor_users/new.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 406ms (Views: 404.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-29 08:42:00 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2UnUOAkYzqesBpvklgzLC2WXkQe9diuRTgxsY55wx8gf3vsvy2yqGIaReQskiDlnLJgZCCBjjj1j0Dg4qIWvg==", "advisor_user"=>{"username"=>"hellogoodbye@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"John", "last_name"=>"Jacob", "school_name"=>"Hello Elementary School", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+Unpermitted parameter: school_name
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (2.2ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('hellogoodbye@tamu.edu') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  Rendered advisor_users/_form.html.erb (18.0ms)
+  Rendered advisor_users/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 677ms (Views: 318.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 16:05:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (18.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 938ms (Views: 901.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/advisor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/high.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/scaffolds.self-4e7792a22104d2dfb478e5c1a43b3bb6c777832eae8b2099a13cb161efd60552.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/elementary.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/advisor_users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/application.self-6afca3cf3fb4e7e5f21e8305579d7cc3bed5a1d10f6db0a91c714a606011cb41.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/middle.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/registration_home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/middle.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/advisor.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/registration_home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/elementary.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/high.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/posts.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/advisor_users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-04-29 16:05:59 -0500
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-29 16:06:02 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 394ms (Views: 392.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 16:06:05 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (38.3ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 409ms (Views: 289.9ms | ActiveRecord: 98.1ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:06:09 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (161.3ms)
+  Rendered advisor_users/new.html.erb within layouts/application (194.2ms)
+Completed 200 OK in 441ms (Views: 435.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advisor_users" for 127.0.0.1 at 2015-04-29 16:06:35 -0500
+Processing by AdvisorUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M63Uge1jUYWwvvNXVGfVRwJVJC0x4SXBL7/4bwHp3WgTsHRG+ejPM3Xr+vHs9KKVOENn3LJbL+/wsKH8ksjtuA==", "advisor_user"=>{"username"=>"hellogoodbye@tamu.edu", "password"=>"[FILTERED]", "first_name"=>"John", "last_name"=>"Jacob", "school_name"=>"Hello Elementary School", "school_level"=>"Middle"}, "commit"=>"Create Advisor user"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mAdvisorUser Exists (4.3ms)[0m  SELECT  1 AS one FROM "advisor_users" WHERE LOWER("advisor_users"."username") = LOWER('hellogoodbye@tamu.edu') LIMIT 1
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "advisor_users" ("username", "password_digest", "first_name", "last_name", "school_level", "school_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "hellogoodbye@tamu.edu"], ["password_digest", "$2a$10$xxP17QQU4A1xDz7UuXn8YuL1X3Oj2B1Ex76DEFaUSn.PDrZuyQe82"], ["first_name", "John"], ["last_name", "Jacob"], ["school_level", "Middle"], ["school_name", "Hello Elementary School"], ["created_at", "2015-04-29 21:06:36.304127"], ["updated_at", "2015-04-29 21:06:36.304127"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users/10
+Completed 302 Found in 446ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/advisor_users/10" for 127.0.0.1 at 2015-04-29 16:06:36 -0500
+Processing by AdvisorUsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdvisorUser Load (1.3ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered advisor_users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 344ms (Views: 286.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 16:15:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationHomeController#index as HTML
+  Rendered registration_home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 897ms (Views: 863.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor/index" for 127.0.0.1 at 2015-04-29 16:15:47 -0500
+Processing by AdvisorController#index as HTML
+  Rendered advisor/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 275ms (Views: 273.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 16:15:50 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[35mAdvisorUser Load (2.4ms)[0m  SELECT "advisor_users".* FROM "advisor_users"
+  Rendered advisor_users/index.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 421ms (Views: 388.9ms | ActiveRecord: 13.6ms)
+
+
+Started DELETE "/advisor_users/10" for 127.0.0.1 at 2015-04-29 16:15:58 -0500
+Processing by AdvisorUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sl64EsnJ0Nm8/BTPAfjOxNo+t2RpwKO3E1YA/XmsijuSQxjV3UJOb3mpHWm5a7kW4Cj0lep6qZnMWVlu6o266w==", "id"=>"10"}
+  [1m[36mAdvisorUser Load (1.0ms)[0m  [1mSELECT  "advisor_users".* FROM "advisor_users" WHERE "advisor_users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "advisor_users" WHERE "advisor_users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (5.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/advisor_users
+Completed 302 Found in 56ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/advisor_users" for 127.0.0.1 at 2015-04-29 16:15:58 -0500
+Processing by AdvisorUsersController#index as HTML
+  [1m[36mAdvisorUser Load (1.1ms)[0m  [1mSELECT "advisor_users".* FROM "advisor_users"[0m
+  Rendered advisor_users/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 329ms (Views: 326.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:16:01 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (102.9ms)
+  Rendered advisor_users/new.html.erb within layouts/application (117.8ms)
+Completed 200 OK in 425ms (Views: 422.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:16:29 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (21.1ms)
+  Rendered advisor_users/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 280ms (Views: 278.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:17:12 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (5.2ms)
+  Rendered advisor_users/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/jake/RoR/final/new/Red-Ninja/app/views/advisor_users/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+...er.append=( f.label :username (email) );@output_buffer.safe_...
+...                               ^):
+  app/views/advisor_users/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+  app/views/advisor_users/new.html.erb:3:in `_app_views_advisor_users_new_html_erb___3435273555951566683_69972754601960'
+
+
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.3ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (145.5ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (147.4ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (3.3ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/jake/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (262.3ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:17:47 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (36.4ms)
+  Rendered advisor_users/new.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 412ms (Views: 410.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advisor_users/new" for 127.0.0.1 at 2015-04-29 16:19:14 -0500
+Processing by AdvisorUsersController#new as HTML
+  Rendered advisor_users/_form.html.erb (20.5ms)
+  Rendered advisor_users/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 282ms (Views: 277.1ms | ActiveRecord: 0.0ms)

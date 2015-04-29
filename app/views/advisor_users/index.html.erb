@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Username</th>
-      <th>Password</th>
+      <th>Password</th
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,9 @@
     <% @advisor_users.each do |advisor_user| %>
       <tr>
         <td><%= advisor_user.username %></td>
-        <td><%= advisor_user.password %></td>
+        <td><%= advisor_user.password_digest %></td>
+        <td><%= advisor_user.first_name %></td>
+        <td><%= advisor_user.last_name %></td>
         <td><%= link_to 'Show', advisor_user %></td>
         <td><%= link_to 'Edit', edit_advisor_user_path(advisor_user) %></td>
         <td><%= link_to 'Destroy', advisor_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

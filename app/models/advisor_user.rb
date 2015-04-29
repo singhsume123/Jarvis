@@ -7,9 +7,9 @@ class AdvisorUser < ActiveRecord::Base
 
   validates :first_name, presence: true, length: {maximum: 60}
   validates :last_name, presence: true, length: {maximum: 60}
-  validates :school_name, presence: true, length: {maximum: 100}
+  validates :school_name, presence: true, length: {maximum: 60}
   validates :school_level, presence: true, #length: {maximum: 60}, 
-  			inclusion: { in: %w(Elementary Middle High), message: "%{value} is not a valid school type" }
+  			inclusion: { in: %w(Elementary Middle High), message: "%{value} is not a valid school level must be Elementary, Middle, or High " }
   #validates :pay_code, presence: true, length: {maximum: 100}
 
   has_secure_password
