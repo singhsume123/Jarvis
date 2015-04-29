@@ -11,11 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150425211824) do
-=======
+
 ActiveRecord::Schema.define(version: 20150429133141) do
->>>>>>> redobackend
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,14 +23,12 @@ ActiveRecord::Schema.define(version: 20150429133141) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
-<<<<<<< HEAD
-=======
     t.string   "first_name"
     t.string   "last_name"
     t.string   "pay_code"
     t.string   "school_level"
     t.string   "school_name"
->>>>>>> redobackend
+
   end
 
   create_table "posts", force: :cascade do |t|
