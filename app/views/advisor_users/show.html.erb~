@@ -7,7 +7,7 @@
 
 <p>
   <strong>Password:</strong>
-  <%= @advisor_user.password_digest %>
+  <%= @advisor_user.password %>
 </p>
 
 <%= link_to 'Edit', edit_advisor_user_path(@advisor_user) %> |
