@@ -91,6 +91,6 @@ class AdvisorUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def advisor_user_params
-      params.require(:advisor_user).permit(:username, :password, :first_name, :last_name, :school_level, :school_name, :pay_code)
+      params.require(:advisor_user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :school_level, :school_name, :pay_code)
     end
 end
