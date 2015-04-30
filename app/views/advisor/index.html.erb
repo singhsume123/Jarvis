@@ -1,38 +1,27 @@
 <div id="main_content">
 	<div id="title"><h1>Advisor Page</h1></div>
-	
-	<!--<form action="action_page.php">
-	<fieldset>
-	<legend>Personal information:</legend>
-	First name:<br>
-	<input type="text" name="firstname" value="Mickey">
-	<br>
-	Last name:<br>
-	<input type="text" name="lastname" value="Mouse">
-	<br><br>
-	<input type="submit" value="Submit"></fieldset>
-	</form>-->
 
-<div id="school_button_contain">
+	<p>Your payment code:</p>
+	<%= current_user.pay_code %>
+	
+	<br>
+	<br>
+	
+	<div id="school_button_contain">
 		<a href="advisor/info">
 			<div class="school_buttons">
-					Submit Payment Information
+					SEC Contact Info for Payment
 			</div>
 		</a>
 		<a href="advisor/team">
 			<div class="school_buttons">
 				Create a Team
 			</div>
-	</a>
-	
-		<a href="/advisor_users">
-			<div class="school_buttons" id="school_button_right">
-				New Advisor Registration
-			</div>
 		</a>
-</div>
+	</div>
 
 </div>
+
 
 
 
