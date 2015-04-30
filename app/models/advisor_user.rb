@@ -12,5 +12,7 @@ class AdvisorUser < ActiveRecord::Base
   			inclusion: { in: %w(Elementary Middle High), message: "%{value} is not a valid school level must be Elementary, Middle, or High " }
   validates :pay_code, presence: true
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }, confirmation: true
+  validates_confirmation_of :password
+
 end
