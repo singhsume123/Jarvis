@@ -52,12 +52,6 @@ class AdvisorUserTest < ActiveSupport::TestCase
     @advisor_users.school_level = "     "
     assert_not @advisor_users.valid?
   end
-=begin
-  test "school_level should not be too long" do
-    @advisor_users.school_level = "a" * 61
-    assert_not @advisor_users.valid?
-  end
-=end
   test "assert false school_level should only be Elementary, Middle, or High" do
     @advisor_users.school_level = "Intermediate"
     assert_not @advisor_users.valid?
@@ -66,12 +60,12 @@ class AdvisorUserTest < ActiveSupport::TestCase
     @advisor_users.school_level = "Elementary"
     assert @advisor_users.valid?
   end
-=begin
-  test "password should be present" do
-    @advisor_users.password = "     "
+  
+  test "pay_code should be present" do
+    @advisor_users.pay_code = "     "
     assert_not @advisor_users.valid?
   end
-=end
+
   test "username/email validation should accept valid addresses" do
     valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn]

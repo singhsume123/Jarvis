@@ -3,6 +3,7 @@ require 'test_helper'
 class AdvisorUsersControllerTest < ActionController::TestCase
   setup do
     @advisor_user = advisor_users(:one)
+    #@advisor_user2 = advisor_users(:two)
   end
 
   test "should get index" do
@@ -18,7 +19,9 @@ class AdvisorUsersControllerTest < ActionController::TestCase
 
   test "should create advisor_user" do
     assert_difference('AdvisorUser.count') do
-      post :create, advisor_user: { password: @advisor_user.password, username: @advisor_user.username }
+      post :create, advisor_user: { password: @advisor_user.password, username: "hollo@tamu.edu", first_name: @advisor_user.first_name,
+					 last_name: @advisor_user.last_name,  school_name: @advisor_user.school_name,
+						school_level: @advisor_user.school_level,  pay_code: "N" }
     end
 
     assert_redirected_to advisor_user_path(assigns(:advisor_user))
