@@ -13,11 +13,24 @@
 	<input type="submit" value="Submit"></fieldset>
 	</form>-->
 
-	<a class="button" href="advisor/info">Submit Payment Information</a>
-	<br>
-	<br>
-	<a class="button" href="advisor/team">Create a Team</a>
-	<%= link_to 'New Advisor Registration', advisor_users_path, :class => "button" %>
+<div id="school_button_contain">
+		<a href="advisor/info">
+			<div class="school_buttons">
+					Submit Payment Information
+			</div>
+		</a>
+		<a href="advisor/team">
+			<div class="school_buttons">
+				Create a Team
+			</div>
+	</a>
+	
+		<a href="/advisor_users">
+			<div class="school_buttons" id="school_button_right">
+				New Advisor Registration
+			</div>
+		</a>
+</div>
 
 </div>
 
