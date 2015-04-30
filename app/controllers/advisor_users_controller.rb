@@ -21,10 +21,32 @@ class AdvisorUsersController < ApplicationController
   def edit
   end
 
+  def genPayCode(seed, existing_pay_code)
+    num = seed.to_i + rand(1000...900000)
+    retcode = existing_pay_code + num.to_s
+    done = 0
+    # Check to see if the pay_code already exists
+    while(done==0)
+      # Checks database for code
+      if AdvisorUser.where(:pay_code => retcode).blank?	
+        done = done + 1 #not in database
+      else
+        retcode = retcode + 1 #in database, increase and check again
+      end
+    end
+    return retcode
+  end
+
   # POST /advisor_users
   # POST /advisor_users.json
   def create
     @advisor_user = AdvisorUser.new(advisor_user_params)
+
+    # generate their paycode if they are paying for students
+    if @advisor_user.pay_code == "Y"
+      @advisor_user.pay_code = genPayCode(@advisor_user.id, @advisor_user.pay_code)
+    else
+    end
 
     respond_to do |format|
       if @advisor_user.save

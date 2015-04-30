@@ -33,7 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :school_level %><br>
-    <%= f.select :school_name, options_for_select(%w[Elementary Middle High]) %> School
+    <%= f.select :school_level, options_for_select(%w[Elementary Middle High]) %> School
+  </div>
+  <div class="field">
+    Will you be paying for all of your students? Choose "Y" for yes, "N" for no<br>
+    <%= f.select :pay_code, options_for_select(%w[Y N]) %>
   </div>
   <div class="actions">
     <%= f.submit %>

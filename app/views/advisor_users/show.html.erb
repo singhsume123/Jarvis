@@ -10,5 +10,10 @@
   <%= @advisor_user.password_digest %>
 </p>
 
+<p>
+  <strong>Pay COde:</strong>
+  <%= @advisor_user.pay_code %>
+</p>
+
 <%= link_to 'Edit', edit_advisor_user_path(@advisor_user) %> |
 <%= link_to 'Back', advisor_users_path %>
