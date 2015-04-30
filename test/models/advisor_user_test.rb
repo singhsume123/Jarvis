@@ -91,6 +91,12 @@ class AdvisorUserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
 
+  test "password should not equal password_confirmation" do
+    @advisor_users.password_confirmation = "thisisnotmypassword"
+    assert_not @advisor_users.valid?
+  end
+
+
   test "password should have a minimum length" do
     @advisor_users.password = @advisor_users.password_confirmation = "a" * 5
     assert_not @advisor_users.valid?
