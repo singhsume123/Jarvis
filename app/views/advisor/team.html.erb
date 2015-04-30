@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://spark.tamu.edu/js/countdown.js"></script>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<title>SPARK Registration Page</title>
+</head>
+
+<body>
+ <div id="upper_banner_bg">
+			<div id="upper_banner"><img src="http://spark.tamu.edu/Expo_upper_banner.jpg">
+			</div>
+			
+			<div id="nav_bar_bg"></div>
+			<div id="expo_logo_bg" class="">
+				<div class="nav">
+				<a href="http://spark.tamu.edu/index.html"><img id="expo_logo" src="http://spark.tamu.edu/spark_logo_web.png" height="90px" width="183px"></a>
+				</div>
+				<div class="nav">
+				<div id="cssmenu">
+					<ul>
+					   <li class="active"><a href="http://spark.tamu.edu/index.html"><span>Home</span></a></li>
+					   		   <li class="has-sub"><a href="/"><span>Register</span></a>
+     						<ul>
+        						<li><a href="/elementary/index"><span>Elementary School</span></a></li>
+         						<li><a href="/middle/index"><span>Middle School</span></a></li>
+         						<li><a href="/high/index"><span>High School</span></a></li>
+         						<li><a href="/advisor/index"><span>Advisors</span></a></li>
+      						</ul>
+   						</li>
+  						
+   						<li class="has-sub"><a href="#"><span>Competitions</span></a>
+     						<ul>
+        						<li><a href="http://spark.tamu.edu/elementary_school.html"><span>Elementary School</span></a></li>
+         						<li><a href="http://spark.tamu.edu/middle_school.html"><span>Middle School</span></a></li>
+         						<li class="last"><a href="http://spark.tamu.edu/high_school.html"><span>High School</span></a></li>
+                                 <li><a href="http://spark.tamu.edu/high_prebuilt.html"><span>High School Prebuilt</span></a></li>
+      						</ul>
+   						</li>
+   						<li class="has-sub"><a href="#"><span>Itinerary</span></a>
+                            <ul>
+                                <li><a href="/itinerary_elementary_middle.html"><span>Elementary/Middle</span></a></li>
+                                <li><a href="/itinerary_high.html"><span>High School</span></a></li>
+                            </ul>
+   						</li>
+						<li class="last"><a><span>About</span></a>
+     						<ul>
+        						<li><a href="http://spark.tamu.edu/about_expo.html"><span>About Spark</span></a></li>
+         						<li><a href="http://spark.tamu.edu/contact_us.html"><span>Contact Us</span></a></li>
+         						<li class="last"><a href="http://spark.tamu.edu/FAQ.html"><span>FAQ</span></a></li>
+      						</ul>
+   						</li>
+
+					</ul>
+				</div>
+				
+				</div>
+				<div class="bg-gradient" class="nav" id="countdown_div"></div>
+  				<div class="container">
+    					<div id="CDT"></div>
+  				</div>
+  					
+			</div>
+			
+		</div>
+ <div id="body_bg">
+      <div id="main_content">
+      	<div id="title"><h1>Team Creation Page</h1></div>
+        
+	<form action="action_page.php">
+        <fieldset>
+        <legend>Team information:</legend>
+        Team name:<br>
+        <input type="text" name="teamname" value="">
+        <br>
+        School name:<br>
+        <input type="text" name="schoolname" value="">
+        <br><br>
+        <input type="submit" value="Submit"></fieldset>
+        </form>
+        
+        <!--<a class="button" href="/advisor_users">New Advisor Registration</a>-->
+      </div>
+    <div id="bottom_contact_us_div">
+          <div id="bottom_contact_us_FAQ">
+            <div id="bottom_links">
+              <a class="bottom_links" href="http://spark.tamu.edu/contact_us.html">Contact Us</a>
+              <a class="bottom_links" href="http://sec.tamu.edu/">About Us</a>
+              <a class="bottom_links" href="http://spark.tamu.edu/FAQ.html">FAQ</a>
+            </div>
+		</div>
+  </div>
+</div>
+</body>
+
+ 
+<!--<%= link_to 'New Advisor Registration', advisor_users_path, :class => "button" %>-->
+</html>
