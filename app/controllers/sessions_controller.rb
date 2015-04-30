@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # log the user in and redirect to some page
       flash.now[:danger] = 'Successfully logged in'
+      log_in user
       render 'advisor/index'
     else
       #create an error message
