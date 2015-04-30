@@ -6,11 +6,11 @@ class SessionsController < ApplicationController
     user = AdvisorUser.find_by(username: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       # log the user in and redirect to some page
-      flash[:danger] = 'Successfully logged in'
-      render 'new'
+      flash.now[:danger] = 'Successfully logged in'
+      render 'advisor/index'
     else
       #create an error message
-      flash[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end

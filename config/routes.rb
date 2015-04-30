@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  get 'advisor/paymentinfo' => 'advisor#paymentinfo'
+
+  get 'advisor/team'
+
+  get 'advisor/info'
+
   get 'sessions/new'
 
   resources :advisor_users

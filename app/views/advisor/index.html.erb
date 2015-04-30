@@ -61,7 +61,7 @@
  <div id="body_bg">
       <div id="main_content">
       	<div id="title"><h1>Advisor Page</h1></div>
-        <form action="action_page.php">
+        <!--<form action="action_page.php">
         <fieldset>
         <legend>Personal information:</legend>
         First name:<br>
@@ -71,9 +71,12 @@
         <input type="text" name="lastname" value="Mouse">
         <br><br>
         <input type="submit" value="Submit"></fieldset>
-        </form>
+        </form>-->
         
-        <a class="button" href="/advisor_users">New Advisor Registration</a>
+	<a class="button" href="advisor/info">Submit Payment Information</a>
+	<br>
+	<br>
+        <a class="button" href="advisor/team">Create a Team</a>
       </div>
     <div id="bottom_contact_us_div">
           <div id="bottom_contact_us_FAQ">
@@ -88,5 +91,5 @@
 </body>
 
  
-<%= link_to 'New Advisor Registration', advisor_users_path, :class => "button" %>
+<!--<%= link_to 'New Advisor Registration', advisor_users_path, :class => "button" %>-->
 </html>
