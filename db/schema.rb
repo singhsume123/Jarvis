@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150429133141) do
+ActiveRecord::Schema.define(version: 20150430201443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +24,9 @@ ActiveRecord::Schema.define(version: 20150429133141) do
     t.string   "password_digest"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "pay_code"
-    t.string   "school_level"
     t.string   "school_name"
-
+    t.string   "school_level"
+    t.string   "pay_code"
   end
 
   create_table "posts", force: :cascade do |t|
