@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   get 'admins/new'
 
+  resources :admins
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+  get 'admin_login' => 'admins#new'
+  post 'admin_login' => 'admins#create'
+  delete 'admin_logout' => 'admins#destroy'
 
   get 'advisor/paymentinfo' => 'advisor#paymentinfo'
 
