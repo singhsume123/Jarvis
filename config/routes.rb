@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'students/new'
+
   get 'admins/new'
 
   get 'login' => 'sessions#new'
