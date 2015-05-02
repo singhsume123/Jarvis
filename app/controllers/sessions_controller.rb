@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:session][:email] && params[:session][:email].downcase=="admin@admin.com"
-      user = Admin.find_by(email: params[:session][:email].downcase)
+    user = Admin.find_by(email: params[:session][:email].downcase)
+    #if params[:session][:email] && params[:session][:email].downcase=="admin@admin.com"
+    if user
         if user.authenticate(params[:session][:password])
           flash.now[:flash] = 'Successfully logged in'
           admin_log_in user
