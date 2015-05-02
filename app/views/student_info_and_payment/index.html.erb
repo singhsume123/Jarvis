@@ -1,2 +1,29 @@
-<h1>StudentInfoAndPayment#index</h1>
-<p>Find me in app/views/student_info_and_payment/index.html.erb</p>
+<div id = "main content">
+<div id = "title"><h1>Student Information and Payment</h1></div>
+<p style="text-align:center">Please Enter the following information about your student</p>
+</div>
+
+<%= form_for :student_info do |f| %>
+	<div style="text-align:center">
+	  <div class="field">
+		Student's <%= f.label :first_name %>
+		<%= f.text_field :first_name, :required => true %>
+	  </div>
+	  <div class="field" >
+		Student's <%= f.label :last_name %>
+		<%= f.text_field :last_name, :required => true %>
+	  </div>
+	  <div class="field">
+		<%= f.label :school_name %>
+		<%= f.text_field :school_name, :required => true %>
+	  </div>
+	  <div class="field">
+		<%= f.label :school_level %>
+		<%= f.select :school_level, options_for_select(%w[Elementary Middle High]) %>
+	  </div>
+	  <div class="actions">
+		<%= f.submit %>
+		
+	  </div>
+	</div>
+<% end %>

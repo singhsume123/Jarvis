@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :student_users
+  get 'student_info_and_payment/index'
+
   get 'consent_forms/index'
 
   get 'login' => 'sessions#new'
