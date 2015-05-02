@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   #get 'admins/new' => 'admins#new'
   #put 'admins/edit' => 'admins#update'
   #patch 'admins/edit' => 'admins#update'
+
+  get 'admins/see_info'
   resources :admins
 
   get 'login' => 'sessions#new'
