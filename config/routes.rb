@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :student_users
   get 'students/new'
 
   get 'admins/new'
