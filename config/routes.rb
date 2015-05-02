@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post 'admin_login' => 'admins#create'
   delete 'admin_logout' => 'admins#destroy'
 
-  get 'advisor/paymentinfo' => 'advisor#paymentinfo'
+  get 'advisor/create_team' => 'advisor#create_team'
 
   get 'advisor/team'
 
