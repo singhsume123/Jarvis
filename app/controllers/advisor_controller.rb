@@ -3,11 +3,11 @@ class AdvisorController < ApplicationController
   end
 
   def create_team
-    current_user.team_name=params[:teamname]
-    current_user.team_code=genTeamCode(current_user.id)
-    current_user.save
+    current_user.update_attribute( :team_name, params[:teamname] )
+    current_user.update_attribute( :team_code, genTeamCode(current_user.id) )
+
     flash.now[:flash] = 'Team Created'
-    render 'advisor/index'
+    render '/advisor/index'
   end
 
   def genTeamCode(seed)
