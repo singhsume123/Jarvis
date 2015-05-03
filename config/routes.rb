@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payment/index'
+
   get 'consent_forms/index'
 
   resources :student_users
