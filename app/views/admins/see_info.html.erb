@@ -22,8 +22,6 @@
         <td><%= advisor_user.last_name %></td>
         <td><%= advisor_user.team_name %></td>
         <td><%= advisor_user.team_code %></td>
-        <td><%= link_to 'Show', advisor_user %></td>
-        <td><%= link_to 'Edit', edit_advisor_user_path(advisor_user) %></td>
         <td><%= link_to 'Destroy', advisor_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -46,8 +44,6 @@
     <% Student.all.each do |student| %>
       <tr>
         <td><%= student.name %></td>
-        <td><%= link_to 'Show', advisor_user %></td>
-        <td><%= link_to 'Edit', edit_advisor_user_path(advisor_user) %></td>
         <td><%= link_to 'Destroy', advisor_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

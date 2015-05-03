@@ -16,8 +16,14 @@ class AdminsController < ApplicationController
   	#render 'admins/edit'
   end
 
+  def advisor_edit_method
+    
+  end
+
   def create
     @admin = Admin.new(admin_params)
+
+    @admin.usertype="admin"
 
     respond_to do |format|
       if @admin.save

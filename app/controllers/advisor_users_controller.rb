@@ -48,6 +48,8 @@ class AdvisorUsersController < ApplicationController
     else
     end
 
+    @advisor_user.usertype="advisor"
+
     respond_to do |format|
       if @advisor_user.save
         format.html { redirect_to @advisor_user, notice: 'Advisor user was successfully created.' }
@@ -77,9 +79,17 @@ class AdvisorUsersController < ApplicationController
   # DELETE /advisor_users/1.json
   def destroy
     @advisor_user.destroy
-    respond_to do |format|
-      format.html { redirect_to advisor_users_url, notice: 'Advisor user was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user
+      respond_to do |format|
+        format.html { redirect_to advisor_users_url, notice: 'Advisor user was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    end
+    if admin_current_user
+      respond_to do |format|
+        format.html { redirect_to '/admins/see_info', notice: 'Advisor user was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 
