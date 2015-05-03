@@ -1,3 +1,9 @@
+<% flash.each do |key, value| %>
+  <div class="flash_message">
+    <%= value %>
+  </div>
+<% end %>
+
 <%= form_for(@student_user) do |f| %>
   <% if @student_user.errors.any? %>
     <div id="error_explanation">
@@ -10,32 +16,26 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :school_level %><br>
-    <%= f.text_field :school_level %>
-  </div>
-  <div class="field">
-    <%= f.label :school_name %><br>
-    <%= f.text_field :school_name %>
-  </div>
-  <div class="field">
-    <%= f.label :team_name %><br>
-    <%= f.text_field :team_name %>
-  </div>
-  <div class="field">
-    <%= f.label :pay_code %><br>
-    <%= f.text_field :pay_code %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+  <div>
+	  <div class="field">
+		<%= f.label :first_name %><br>
+		<%= f.text_field :first_name %>
+	  </div>
+	  <div class="field">
+		<%= f.label :last_name %><br>
+		<%= f.text_field :last_name %>
+	  </div>
+	  <div class="field">
+		<%= f.label :school_name %><br>
+		<%= f.text_field :school_name %>
+	  </div>
+	  <div class="field">
+		<%= f.label :grade_level %><br>
+		<%= f.select :school_level, options_for_select(%w[Elementary Middle High]), :value => "Elementary"%>
+	  </div>
+	  <div class="actions">
+		<%= f.submit %>
+	  </div>
   </div>
 <% end %>
