@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'registration_complete/index'
+
+  get 'payment/marketplace'
+
   get 'payment/index'
 
   get 'consent_forms/index'

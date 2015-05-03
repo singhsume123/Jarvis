@@ -20,15 +20,5 @@
   <%= @student_user.school_name %>
 </p>
 
-<p>
-  <strong>Team name:</strong>
-  <%= @student_user.team_name %>
-</p>
-
-<p>
-  <strong>Pay code:</strong>
-  <%= @student_user.pay_code %>
-</p>
-
 <%= link_to 'Edit', edit_student_user_path(@student_user) %> |
-<%= link_to 'Back', student_users_path %>
+<%= link_to 'Continue', '/consent_forms/index' %>
