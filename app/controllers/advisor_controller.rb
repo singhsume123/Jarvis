@@ -5,6 +5,7 @@ class AdvisorController < ApplicationController
   def create_team
     current_user.team_name=params[:teamname]
     current_user.team_code=genTeamCode(current_user.id)
+    current_user.save
     flash.now[:flash] = 'Team Created'
     render 'advisor/index'
   end
