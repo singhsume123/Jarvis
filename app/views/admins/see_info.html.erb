@@ -10,6 +10,7 @@
       <th>Last Name</th>
       <th>Team Name</th>
       <th>Team Code</th>
+      <th>Pay Code</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= advisor_user.last_name %></td>
         <td><%= advisor_user.team_name %></td>
         <td><%= advisor_user.team_code %></td>
+        <td><%= advisor_user.pay_code %></td>
         <td><%= link_to 'Destroy', advisor_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

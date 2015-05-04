@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'payment/marketplace'
 
   get 'payment/index'
-
+  post 'checkpay' => 'payment#checkpay'
   get 'consent_forms/index'
 
   resources :student_users
