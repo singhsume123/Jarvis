@@ -46,6 +46,8 @@ Rails.application.routes.draw do
 
   resources :advisor_users
   get 'advisor/index'
+  
+  get 'advisor_user/export_csv' => 'advisor_user#export_csv'
 
   get 'high/index'
 
@@ -54,6 +56,7 @@ Rails.application.routes.draw do
   get 'elementary/index'
 
   get 'registration_home/index'
+  
   
 
   resources :posts
