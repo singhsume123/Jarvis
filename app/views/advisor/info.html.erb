@@ -7,8 +7,8 @@
 	<br>
 	
 	<div id="info_contain">
-		<p>Name: Torey Dierckman</p>
-		<p>Phone Number: 979-847-8567</p>
+		<p>Name: <%= Admin.first.name %></p>
+		<p>Phone Number: <%= Admin.first.phone %></p>
 		<p>Email: spark@sec.tamu.edu</p>
 	</div>
         <%= link_to 'Back', '/advisor/index' %>
