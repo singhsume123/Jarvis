@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   root 'registration_home#index'
   get 'students/new'
 
-  #get 'admins/new' => 'admins#new'
-  #put 'admins/edit' => 'admins#update'
-  #patch 'admins/edit' => 'admins#update'
   resources :admins
+  get 'changeadminlogin' => 'admins#editlogin'
+  put 'changeadminlogin/:id' => 'admins#changelogin'
+  patch 'changeadminlogin/:id' => 'admins#changelogin'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

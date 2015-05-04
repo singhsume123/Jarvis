@@ -13,7 +13,10 @@ class AdminsController < ApplicationController
   end
 
   def edit
-  	#render 'admins/edit'
+  end
+
+  def editlogin
+  	render 'admins/changelogin'
   end
 
   def create
@@ -32,14 +35,33 @@ class AdminsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @admin.update(admin_params)
-      #if @admin.update_attribute(name: params[:admin][:name])
+      if @admin.update_attribute(:name , params[:admin][:name]) | @admin.update_attribute(:right_sig_url , params[:admin][:right_sig_url]) |
+								  @admin.update_attribute(:mkt_place_url , params[:admin][:mkt_place_url]) |
+								  @admin.update_attribute(:phone , params[:admin][:phone]) |
+								  @admin.update_attribute(:fax , params[:admin][:fax])
+	
+      #if @admin.update(admin_params)						  
         format.html { redirect_to @admin, notice: 'Admin user was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin }
+
       else
         format.html { render :edit }
         format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def changelogin
+    #@admin.right_sig_url = Admin.first.right_sig_url
+    respond_to do |format|
+     # if @admin.update_attribute(:email , params[:admin][:email]) 
+       # format.html { redirect_to @admin, notice: 'Admin user was successfully updated.' }
+        #format.json { render :show, status: :ok, location: @admin }
+     # else
+        #format.html { render :edit }
+        #format.json { render json: @admin.errors, status: :unprocessable_entity }
+     # end
+      format.html { render :edit }
     end
   end
 
@@ -53,8 +75,5 @@ class AdminsController < ApplicationController
     end
     def admin_params
       params.require(:admin).permit(:email, :password, :password_confirmation, :name, :phone, :fax, :right_sig_url, :mkt_place_url)
-    end
-    def admin_params_update
-      params.require(:admin).permit(:name)
     end
 end
