@@ -71,7 +71,7 @@ class AdminsController < ApplicationController
     end
   end
 
-  def detroy
+  def destroy
     @admin.destroy
   end
   private
