@@ -4,6 +4,21 @@
   </div>
 <% end %>
 
+
+<div style="text-align:center">
+<% team_code_valid = session[:team_code_valid]  
+	success_message = "Team joined Successfully!"
+	failure_message = "Team joined Failed!"
+	team_code_value = ""
+%>
+	<% if(team_code_valid) %>
+		<b style="color:green"> <%= success_message %> </b>
+		<%team_code_value = session[:team_code]%>
+	<% end %>
+	<% if(team_code_valid == nil) %> <b style="color:red"><%= failure_message %></b>
+	<% end %>
+</div>
+
 <%= form_for(@student_user) do |f| %>
   <% if @student_user.errors.any? %>
     <div id="error_explanation">
@@ -33,6 +48,9 @@
 	  <div class="field">
 		<%= f.label :grade_level %><br>
 		<%= f.select :school_level, options_for_select(%w[Elementary Middle High]), :value => "Elementary"%>
+	  </div>
+	  <div class="field">
+		<%= f.text_field :team_code, :value => team_code_value, :hidden => true %>
 	  </div>
 	  <div class="actions">
 		<%= f.submit :value => "Register Student"%>
