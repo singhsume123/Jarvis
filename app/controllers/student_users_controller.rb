@@ -26,6 +26,9 @@ class StudentUsersController < ApplicationController
   def create
     @student_user = StudentUser.new(student_user_params)
 
+	session[:team_code] = nil
+	session[:team_code_valid] = nil
+	
     respond_to do |format|
       if @student_user.save
         format.html { redirect_to @student_user, notice: 'Student user was successfully created.' }
@@ -69,7 +72,7 @@ class StudentUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_user_params
-      params.require(:student_user).permit(:first_name, :last_name, :school_level, :school_name, :team_name, :pay_code)
+      params.require(:student_user).permit(:first_name, :last_name, :school_level, :school_name, :team_name, :pay_code, :team_code)
     end
 	
 	def sdgsdgsgsd(school_level)
