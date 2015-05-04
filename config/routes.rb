@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   delete 'admin_logout' => 'admins#destroy'
 
   get 'advisor/create_team' => 'advisor#create_team'
+  get 'advisor/see_team'
 
   get 'advisor/team'
 
