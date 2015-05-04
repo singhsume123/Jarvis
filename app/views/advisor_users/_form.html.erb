@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %>(Email)<br>
+    <label for="advisor_user_username">Email</label>
     <%= f.text_field :username %>
   </div>
   <div class="field">
@@ -20,15 +20,15 @@
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br>
+    <label for="advisor_user_password_confirmation">Re-type Password</label>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
-    <%= f.label :first_name %><br>
+    <label for="advisor_user_first_name">First Name</label>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
+    <label for="advisor_user_last_name">Last Name</label>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :school_level %><br>
-    <%= f.select :school_level, options_for_select(%w[Elementary Middle High]) %> School
+    <%= f.select :school_level, options_for_select(%w[Elementary Middle High]) %>
   </div>
   <div class="actions">
     <%= f.submit %>
