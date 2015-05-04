@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   #patch 'admins/edit' => 'admins#update'
 
   get 'admins/see_info'
+
   resources :admins
+  get 'changeadminlogin' => 'admins#editlogin'
+  put 'changeadminlogin/:id' => 'admins#changelogin'
+  patch 'changeadminlogin/:id' => 'admins#changelogin'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
