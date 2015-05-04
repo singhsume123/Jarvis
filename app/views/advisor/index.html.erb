@@ -1,19 +1,27 @@
+<% flash.each do |key, value| %>
+  <div class="flash_message">
+    <%= value %>
+  </div>
+<% end %>
+
 <div id="main_content">
 	<div id="title"><h1>Advisor Page</h1></div>
 
-	<p>Your payment code:</p>
-	<%= current_user.pay_code %>
+	<p>Your team name:</p>
+	<%= current_user.team_name %>
+        <p>Your team code:</p>
+        <%= current_user.team_code %>
 	
 	<br>
 	<br>
 	
 	<div id="school_button_contain">
-		<a href="advisor/info">
+		<a href="/advisor/info">
 			<div class="school_buttons">
 					SEC Contact Info for Payment
 			</div>
 		</a>
-		<a href="advisor/team">
+		<a href="/advisor/team">
 			<div class="school_buttons">
 				Create a Team
 			</div>

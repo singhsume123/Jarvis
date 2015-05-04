@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   get 'consent_forms/index'
 
   resources :student_users
+  root 'registration_home#index'
   get 'students/new'
 
-  get 'admins/new'
+  #get 'admins/new' => 'admins#new'
+  #put 'admins/edit' => 'admins#update'
+  #patch 'admins/edit' => 'admins#update'
 
+  get 'admins/see_info'
   resources :admins
 
   get 'login' => 'sessions#new'
@@ -22,7 +26,7 @@ Rails.application.routes.draw do
   post 'admin_login' => 'admins#create'
   delete 'admin_logout' => 'admins#destroy'
 
-  get 'advisor/paymentinfo' => 'advisor#paymentinfo'
+  get 'advisor/create_team' => 'advisor#create_team'
 
   get 'advisor/team'
 
@@ -47,7 +51,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-    root 'registration_home#index'
+    
   #  root 'posts#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

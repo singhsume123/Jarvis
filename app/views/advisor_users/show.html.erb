@@ -6,13 +6,18 @@
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @advisor_user.password_digest %>
+  <strong>Pay Code:</strong>
+  <%= @advisor_user.pay_code %>
 </p>
 
 <p>
-  <strong>Pay COde:</strong>
-  <%= @advisor_user.pay_code %>
+  <strong>Team Name:</strong>
+  <%= @advisor_user.team_name %>
+</p>
+
+<p>
+  <strong>Team Code:</strong>
+  <%= @advisor_user.team_code %>
 </p>
 
 <%= link_to 'Edit', edit_advisor_user_path(@advisor_user) %> |

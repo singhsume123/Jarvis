@@ -5,11 +5,11 @@ module AdminsHelper
   end
 
   def admin_current_user
-    @current_user ||= Admin.find_by(id: session[:user_id])
+    @admin_current_user ||= Admin.find_by(id: session[:user_id])
   end
 
   def admin_logged_in?
-    !current_user.nil?
+    !admin_current_user.nil? && admin_current_user.usertype=="admin"
   end
 
 end
