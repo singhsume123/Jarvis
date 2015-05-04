@@ -15,8 +15,6 @@
 		<b style="color:green"> <%= success_message %> </b>
 		<%team_code_value = session[:team_code]%>
 	<% end %>
-	<% if(team_code_valid == nil) %> <b style="color:red"><%= failure_message %></b>
-	<% end %>
 </div>
 
 <%= form_for(@student_user) do |f| %>

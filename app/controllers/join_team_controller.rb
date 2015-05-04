@@ -12,7 +12,7 @@ class JoinTeamController < ApplicationController
 		session[:team_code_valid] = false
 		redirect_to join_team_index_path
 	else 
-		session[:team_code_valid]  = true
+		session[:team_code_valid] = true
 		session[:team_code] = team_code
 		redirect_to new_student_user_path
 	end
