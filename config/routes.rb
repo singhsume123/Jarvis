@@ -55,7 +55,6 @@ Rails.application.routes.draw do
 
   get 'registration_home/index'
   
-  match '/advisors/export' => 'advisors#export_csv'
 
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
