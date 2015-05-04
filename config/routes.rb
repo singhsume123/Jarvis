@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'join_team/index'
   
   post 'join_team/joining_team'
+  post 'myform' => 'join_team#parse_comments'
 
   get 'registration_complete/index'
 
