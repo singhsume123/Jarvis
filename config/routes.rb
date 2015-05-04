@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  
+  get 'join_team/index'
+  
+  post 'join_team/joining_team'
+  post 'myform' => 'join_team#parse_comments'
+
+  get 'registration_complete/index'
+
+  get 'payment/marketplace'
+
+  get 'payment/index'
+  post 'checkpay' => 'payment#checkpay'
+  get 'consent_forms/index'
+
+  resources :student_users
   root 'registration_home#index'
   get 'students/new'
 

@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: testapp_development
-  username: zlewis
+  username: kevin
   password:
   
 

@@ -21,9 +21,9 @@ class AdvisorUsersController < ApplicationController
   def edit
   end
 
-  def genPayCode(seed, existing_pay_code)
+  def genPayCode(seed)
     num = seed.to_i + rand(1000...900000)
-    retcode = existing_pay_code + num.to_s
+    retcode = 'Y' + num.to_s
     done = 0
     # Check to see if the pay_code already exists
     while(done==0)
@@ -43,10 +43,7 @@ class AdvisorUsersController < ApplicationController
     @advisor_user = AdvisorUser.new(advisor_user_params)
 
     # generate their paycode if they are paying for students
-    if @advisor_user.pay_code == "Y"
-      @advisor_user.pay_code = genPayCode(@advisor_user.id, @advisor_user.pay_code)
-    else
-    end
+    @advisor_user.pay_code = genPayCode(@advisor_user.id)
 
     @advisor_user.usertype="advisor"
 
