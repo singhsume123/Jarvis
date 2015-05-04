@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  get 'join_team/index'
+  
+  post 'join_team/joining_team'
+
   get 'registration_complete/index'
 
   get 'payment/marketplace'
