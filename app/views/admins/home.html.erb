@@ -1,5 +1,9 @@
+<% if admin_logged_in? %>
+
 <a href="/admins/see_info">
 	Advisor Information
 </a>
 <br></br>
 <p>Want to change info? <%= link_to "Click Here!", admin_path(Admin.first) %></p>
+
+<% end %>
