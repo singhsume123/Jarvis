@@ -22,6 +22,15 @@
   position:absolute;
   background-color:#500000;
 }
+#center_form{
+	background-color:#ccc;
+	font-family:veranda, arial, helvetica, sans-serif;
+	margin-left:200px;
+	margin-right:200px;
+	padding-left: 40px;
+	padding-top:10px;
+	box-shadow:inset 0 4px 0 rgba(255,255,255,0.2);
+}
 
 #twitter_feed {
     text-align:center;
