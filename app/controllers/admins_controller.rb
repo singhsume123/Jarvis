@@ -1,5 +1,5 @@
 class AdminsController < ApplicationController
-  before_action :set_advisor_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_advisor_user, only: [:show, :edit, :update, :destroy, :editlogin, :changelogin]
 
   def index
     @admin = Admin.all
@@ -16,7 +16,10 @@ class AdminsController < ApplicationController
   end
 
   def editlogin
-  	render 'admins/changelogin'
+    #@admin = Admin.find_by_id(params[:id])
+    #render changelogin_admin_path(@admin)
+    render 'admins/changelogin'
+    #redirect_to changelogin_admin_path(@admin)
   end
 
   def advisor_edit_method
@@ -31,10 +34,10 @@ class AdminsController < ApplicationController
     respond_to do |format|
       if @admin.save
         format.html { render registration_home_index_path, notice: 'Advisor user was successfully created.' }
-        format.json { render registration_home_index_path, status: :created, location: @advisor_user }
+        format.json { render registration_home_index_path, status: :created, location: @admin }
       else
         format.html { render :new }
-        format.json { render json: @advisor_user.errors, status: :unprocessable_entity }
+        format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,16 +61,18 @@ class AdminsController < ApplicationController
   end
 
   def changelogin
+    #@admin = Admin.find_by_id(params[:id])
     #@admin.right_sig_url = Admin.first.right_sig_url
     respond_to do |format|
-     # if @admin.update_attribute(:email , params[:admin][:email]) 
-       # format.html { redirect_to @admin, notice: 'Admin user was successfully updated.' }
-        #format.json { render :show, status: :ok, location: @admin }
-     # else
-        #format.html { render :edit }
-        #format.json { render json: @admin.errors, status: :unprocessable_entity }
-     # end
-      format.html { render :edit }
+     #if @admin.update_attribute(:email , params[:admin][:email]) | @admin.update_attribute(:password , params[:admin][:password]) &
+	#@admin.update_attribute(:password_confirmation , params[:admin][:password_confirmation])
+     if @admin.update(admin_params)
+       format.html { redirect_to @admin, notice: 'WORKED.' }
+       format.json { render :show, status: :ok, location: @admin }
+     else
+       format.html { redirect_to changelogin_admin_path(@admin), notice: "Either the email or password you entered was invalid. Email must be valid email, password must be at least 6 characters long" } 
+       format.json { render json: @admin.errors, status: :unprocessable_entity }
+     end
     end
   end
 
@@ -77,7 +82,8 @@ class AdminsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_advisor_user
-      @admin = Admin.first
+      #@admin = Admin.first
+      @admin = Admin.find_by_id(params[:id])
     end
     def admin_params
       params.require(:admin).permit(:email, :password, :password_confirmation, :name, :phone, :fax, :right_sig_url, :mkt_place_url)
