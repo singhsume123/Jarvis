@@ -28,6 +28,7 @@ class StudentUsersController < ApplicationController
 
 	session[:team_code] = nil
 	session[:team_code_valid] = nil
+	@student_user.school_level=session[:student_level]
 	
     respond_to do |format|
       if @student_user.save
@@ -59,7 +60,7 @@ class StudentUsersController < ApplicationController
   def destroy
     @student_user.destroy
     respond_to do |format|
-      format.html { redirect_to student_users_url, notice: 'Student user was successfully destroyed.' }
+      format.html { redirect_to '/admins/see_info', notice: 'Student user was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

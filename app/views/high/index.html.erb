@@ -4,12 +4,30 @@
 
 <div style="text-align:center">
 <p>Team or Individual?</p>
+
+<!--
 <form action="../join_team/index">
 	<input type="submit" value="Team">
 </form>
-<form action="../student_users/new">
+
+
+<form action="../student_users/new?student_level=High">
 	<input type="submit" value="Individual">
 </form>
+-->
+
+<div id="school_button_contain">
+
+	<a href="../join_team/index">
+		<div id="team_button" class="school_buttons">Team</div>
+	</a>
+
+	<a href="/student_users/new?student_level=High">
+		<div id="individual_button" class="school_buttons">Individual</div>
+	</a>
+
+</div>
+
 </div>
 
 </div>
