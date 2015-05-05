@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150503212343) do
 
   # These are extensions that must be enabled in order to support this database
@@ -37,9 +38,9 @@ ActiveRecord::Schema.define(version: 20150503212343) do
     t.string   "password_digest"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "pay_code"
-    t.string   "school_level"
     t.string   "school_name"
+    t.string   "school_level"
+    t.string   "pay_code"
     t.string   "team_name"
     t.string   "team_code"
     t.string   "usertype"
@@ -55,6 +56,29 @@ ActiveRecord::Schema.define(version: 20150503212343) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "code"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "school_level"
+    t.string   "school_name"
+    t.string   "team_name"
+    t.string   "pay_code"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "student_users", force: :cascade do |t|
+    t.string   "school_level"
+    t.string   "school_name"
+    t.string   "team_name"
+    t.string   "pay_code"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "team_code"
   end
 
   create_table "students", force: :cascade do |t|

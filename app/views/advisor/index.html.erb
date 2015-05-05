@@ -26,6 +26,13 @@
 				Create a Team
 			</div>
 		</a>
+                <% if current_user.school_level=="High" %>
+                	<a href="/advisor/see_team">
+			  	<div class="school_buttons">
+			  		See Students On Your Team
+				</div>
+			</a>
+		<% end %>
 	</div>
 
 </div>

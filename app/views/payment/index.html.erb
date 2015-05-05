@@ -1,0 +1,19 @@
+<div id = "main content">
+<div id = "title"><h1>Payment</h1></div>
+<p style="text-align:center">Please provide the information below to sign up for SPARK</p>
+
+<div style="text-align:center">
+<p style="color:red"><%= notice %></p>
+If you have a payment code enter it here
+<%= form_tag :action => 'checkpay' do %>
+  <%= text_field_tag(:pay_code) %>
+  <%= submit_tag("Submit Pay Code") %>
+<% end %>
+<br>
+<p>If you DO NOT have a payment code:</p>
+<form action="marketplace">
+	<input type="submit" value="Continue to Marketplace">
+</form> 
+</div>
+
+</div>

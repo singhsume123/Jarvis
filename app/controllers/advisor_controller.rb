@@ -26,4 +26,6 @@ class AdvisorController < ApplicationController
     end
     return retcode
   end
+  
+
 end

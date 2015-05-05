@@ -21,9 +21,9 @@ class AdvisorUsersController < ApplicationController
   def edit
   end
 
-  def genPayCode(seed, existing_pay_code)
+  def genPayCode(seed)
     num = seed.to_i + rand(1000...900000)
-    retcode = existing_pay_code + num.to_s
+    retcode = 'Y' + num.to_s
     done = 0
     # Check to see if the pay_code already exists
     while(done==0)
@@ -36,6 +36,14 @@ class AdvisorUsersController < ApplicationController
     end
     return retcode
   end
+  
+  def export_csv
+    @advisor_user = AdvisorUser.all
+	  advisor_csv = CSV.generate do |csv|
+    csv << ["Email", "First Name", "Last Name","School Name","Pay Code"]
+    @advisor_user.each do |advisor|
+      csv << [advisor.username,advisor.first_name,advisor.last_name,advisor.school_name,advisor.pay_code]     end   end    send_data(advisor_csv, :type => 'text/csv', :filename => 'advisors.csv')
+ end
 
   # POST /advisor_users
   # POST /advisor_users.json
@@ -43,10 +51,7 @@ class AdvisorUsersController < ApplicationController
     @advisor_user = AdvisorUser.new(advisor_user_params)
 
     # generate their paycode if they are paying for students
-    if @advisor_user.pay_code == "Y"
-      @advisor_user.pay_code = genPayCode(@advisor_user.id, @advisor_user.pay_code)
-    else
-    end
+    @advisor_user.pay_code = genPayCode(@advisor_user.id)
 
     @advisor_user.usertype="advisor"
 

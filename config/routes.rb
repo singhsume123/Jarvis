@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  
+  get 'join_team/index'
+  
+  post 'join_team/joining_team'
+  post 'myform' => 'join_team#parse_comments'
+
+  get 'registration_complete/index'
+
+  get 'payment/marketplace'
+
+  get 'payment/index'
+  post 'checkpay' => 'payment#checkpay'
+  get 'consent_forms/index'
+
+  resources :student_users
   root 'registration_home#index'
   get 'students/new'
 
@@ -22,6 +37,7 @@ Rails.application.routes.draw do
   delete 'admin_logout' => 'admins#destroy'
 
   get 'advisor/create_team' => 'advisor#create_team'
+  get 'advisor/see_team'
 
   get 'advisor/team'
 
@@ -31,6 +47,8 @@ Rails.application.routes.draw do
 
   resources :advisor_users
   get 'advisor/index'
+  
+  #get 'advisor_user/export_csv' => 'advisor_user#export_csv'
 
   get 'high/index'
 
@@ -39,6 +57,8 @@ Rails.application.routes.draw do
   get 'elementary/index'
 
   get 'registration_home/index'
+  
+  
 
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
