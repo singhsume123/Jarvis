@@ -5,7 +5,13 @@
 <% end %>
 
 <div id="main_content">
+
   <div id="title"><h1>Team Creation Page</h1></div>
+
+  <% if !current_user.team_code.nil? %>
+  If you have already created a team, creating another one will replace your current team.
+  <% end %>
+
   <form action="create_team">
   <fieldset>
   <legend>Team information:</legend>
@@ -16,5 +22,6 @@
   </form>
   
   <%= link_to 'Back', '/advisor/index' %>
+
 </div>
 
