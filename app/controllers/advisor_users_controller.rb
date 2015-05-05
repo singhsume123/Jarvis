@@ -37,14 +37,6 @@ class AdvisorUsersController < ApplicationController
     return retcode
   end
   
-  def export_csv
-    @advisor_user = AdvisorUser.all
-	  advisor_csv = CSV.generate do |csv|
-    csv << ["Email", "First Name", "Last Name","School Name","Pay Code"]
-    @advisor_user.each do |advisor|
-      csv << [advisor.username,advisor.first_name,advisor.last_name,advisor.school_name,advisor.pay_code]     end   end    send_data(advisor_csv, :type => 'text/csv', :filename => 'advisors.csv')
- end
-
   # POST /advisor_users
   # POST /advisor_users.json
   def create
