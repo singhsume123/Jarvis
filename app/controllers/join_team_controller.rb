@@ -14,7 +14,7 @@ class JoinTeamController < ApplicationController
 	else 
 		session[:team_code_valid] = true
 		session[:team_code] = team_code
-		redirect_to new_student_user_path
+		redirect_to "/student_users/new?student_level=High"
 	end
 	
 	#redirect_to new_student_user_path
