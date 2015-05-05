@@ -1,5 +1,5 @@
 class AdminsController < ApplicationController
-  before_action :set_advisor_user, only: [:show, :edit, :update, :destroy, :editlogin, :changelogin]
+  before_action :set_advisor_user, only: [:show, :edit, :update, :destroy, :editlogin, :changelogin, :changepassword, :editpassword]
 
   def index
     @admin = Admin.all
@@ -16,10 +16,11 @@ class AdminsController < ApplicationController
   end
 
   def editlogin
-    #@admin = Admin.find_by_id(params[:id])
-    #render changelogin_admin_path(@admin)
     render 'admins/changelogin'
-    #redirect_to changelogin_admin_path(@admin)
+  end
+
+  def editpassword
+    render 'admins/changepassword'
   end
 
   def advisor_edit_method
@@ -33,7 +34,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.save
-        format.html { render registration_home_index_path, notice: 'Advisor user was successfully created.' }
+        format.html { render registration_home_index_path, notice: 'Advisor user was successfully created!' }
         format.json { render registration_home_index_path, status: :created, location: @admin }
       else
         format.html { render :new }
@@ -48,9 +49,8 @@ class AdminsController < ApplicationController
 								  @admin.update_attribute(:mkt_place_url , params[:admin][:mkt_place_url]) |
 								  @admin.update_attribute(:phone , params[:admin][:phone]) |
 								  @admin.update_attribute(:fax , params[:admin][:fax])
-	
-      #if @admin.update(admin_params)						  
-        format.html { redirect_to @admin, notice: 'Admin user was successfully updated.' }
+						  
+        format.html { redirect_to @admin, notice: 'Admin user was successfully updated!' }
         format.json { render :show, status: :ok, location: @admin }
 
       else
@@ -61,16 +61,25 @@ class AdminsController < ApplicationController
   end
 
   def changelogin
-    #@admin = Admin.find_by_id(params[:id])
-    #@admin.right_sig_url = Admin.first.right_sig_url
     respond_to do |format|
-     #if @admin.update_attribute(:email , params[:admin][:email]) | @admin.update_attribute(:password , params[:admin][:password]) &
-	#@admin.update_attribute(:password_confirmation , params[:admin][:password_confirmation])
-     if @admin.update(admin_params)
-       format.html { redirect_to @admin, notice: 'WORKED.' }
+      if @admin.update_attribute(:email, params[:admin][:email])
+      #if @admin.update_attributes(:email => params[:admin][:email])
+       format.html { redirect_to @admin, notice: 'Admin email was successfully updated!' }
        format.json { render :show, status: :ok, location: @admin }
      else
-       format.html { redirect_to changelogin_admin_path(@admin), notice: "Either the email or password you entered was invalid. Email must be valid email, password must be at least 6 characters long" } 
+       format.html { redirect_to changelogin_admin_path(@admin), notice: 'Email invalid! Must follow  \'user\' @ \'domain\' . \'com\'  standard template' } 
+       format.json { render json: @admin.errors, status: :unprocessable_entity }
+     end
+    end
+  end
+
+  def changepassword
+    respond_to do |format|
+     if @admin.update(admin_params)
+       format.html { redirect_to @admin, notice: 'Admin password was successfully updated!' }
+       format.json { render :show, status: :ok, location: @admin }
+     else
+       format.html { redirect_to changepassword_admin_path(@admin), notice: 'Password must be at least 6 characters long and must match confirmation' } 
        format.json { render json: @admin.errors, status: :unprocessable_entity }
      end
     end
