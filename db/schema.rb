@@ -11,11 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150429133141) do
+ActiveRecord::Schema.define(version: 20150503212343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "right_sig_url"
+    t.string   "mkt_place_url"
+    t.string   "usertype"
+  end
 
   create_table "advisor_users", force: :cascade do |t|
     t.string   "username"
@@ -28,14 +40,32 @@ ActiveRecord::Schema.define(version: 20150429133141) do
     t.string   "pay_code"
     t.string   "school_level"
     t.string   "school_name"
-
+    t.string   "team_name"
+    t.string   "team_code"
+    t.string   "usertype"
   end
+
+  add_index "advisor_users", ["username"], name: "index_advisor_users_on_username", unique: true, using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "code"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "school_level"
+    t.string   "school_name"
+    t.string   "team_name"
+    t.string   "pay_code"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
