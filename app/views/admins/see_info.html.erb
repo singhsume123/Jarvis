@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Advisor Users</h1>
+<h1>Advisor Users</h1>
 
 <table>
   <thead>
@@ -33,7 +33,7 @@
 </table>
 
 
-<h1>Listing Students</h1>
+<h1>Students</h1> <%= link_to "CSV", student_users_path(format: "csv") %> | <%= link_to "Excel", student_users_path(format: "xls") %> <br></br>
 
 <table>
   <thead>
