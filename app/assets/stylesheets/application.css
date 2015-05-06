@@ -268,6 +268,31 @@
   margin-right:0px;
 }
 
+.school_buttons2 {
+   border: 2px solid #000000;
+   background: #710303;
+   padding: 20px 20px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   width:190px;
+   margin-right:5px;
+   display:inline-block;
+   /*float:left;*/
+   height:60px;
+   margin-right:50px;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 20px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   /* text-align:center; */
+   opacity:1;
+}
+
 .school_buttons {
    border: 2px solid #000000;
    background: #710303;
