@@ -41,6 +41,8 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get 'forgotpassword' => 'sessions#editforgotpassword'
+  post 'emailforgotpassword' => 'sessions#emailforgotpassword'
 
   get 'admin_login' => 'admins#new'
   post 'admin_login' => 'admins#create'

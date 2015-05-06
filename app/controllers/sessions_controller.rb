@@ -30,6 +30,32 @@ class SessionsController < ApplicationController
     end
   end
 
+  def emailforgotpassword
+    adminuser = Admin.find_by(email: params[:session][:email].downcase)
+    if adminuser 
+      respond_to do |format|
+        format.html { redirect_to forgotpassword_path, notice: 'YAYadmin' }
+        UserMailer.forgot_password(adminuser).deliver_now
+      end
+    else
+      advisoruser = AdvisorUser.find_by(username: params[:session][:email].downcase)
+      if advisoruser
+        respond_to do |format|
+          format.html { redirect_to forgotpassword_path, notice: 'YAYadvisor' }
+          UserMailer.forgot_password(advisoruser).deliver_now
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to forgotpassword_path, notice: 'NO USER' }
+        end
+      end
+    end
+  end
+ 
+  def editforgotpassword
+    render 'sessions/forgotpassword'
+  end
+
   def destroy
   end
 end
