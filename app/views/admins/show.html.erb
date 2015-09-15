@@ -15,10 +15,6 @@
   <%= @admin.phone %>
 </p>
 <p>
-  <strong>Fax:</strong>
-  <%= @admin.fax %>
-</p>
-<p>
   <strong>Right Signature URL:</strong>
   <%= @admin.right_sig_url %>
 </p>
@@ -28,7 +24,6 @@
 </p>
 
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
-<%= link_to 'Login', login_path %> |
 <%= link_to 'Change Email', changelogin_admin_path(@admin) %> |
 <%= link_to 'Change Password', changepassword_admin_path(@admin) %>
 
