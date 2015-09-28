@@ -37,7 +37,7 @@ class StudentUsersController < ApplicationController
 	
     respond_to do |format|
       if @student_user.save
-        format.html { redirect_to @student_user, notice: 'Student user was successfully created.' }
+        format.html { redirect_to @student_user, notice: 'Please review this information to ensure it is correct' }
         format.json { render :show, status: :created, location: @student_user }
       else
         format.html { render :new }

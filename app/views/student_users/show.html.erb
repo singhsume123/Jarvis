@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><font color="orange" size="5"><%= notice %></font></p>
 
 <p>
   <strong>First name:</strong>
@@ -25,5 +25,8 @@
   <%= @student_user.team_code %>
 </p>
 
+<p><font size="3" color="orange">If this information is correct, please click continue</font></p>
+
 <%= link_to 'Edit', edit_student_user_path(@student_user) %> |
 <%= link_to 'Continue', '/consent_forms/index' %>
+
