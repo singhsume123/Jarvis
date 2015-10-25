@@ -1,5 +1,5 @@
-class AddPasswordDigestToAdmins < ActiveRecord::Migration
+class AddPasswordDigestToAdvisorUsers < ActiveRecord::Migration
   def change
-    add_column :admins, :password_digest, :string
+    add_column :advisor_users, :password_digest, :string
   end
 end
