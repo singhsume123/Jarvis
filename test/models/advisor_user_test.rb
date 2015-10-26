@@ -6,7 +6,12 @@ class AdvisorUserTest < ActiveSupport::TestCase
   # end
 
   def setup
-    @advisor_users = AdvisorUser.new(username: "advisor@domain.com", password: "password", password_confirmation: "password", first_name: "Jake", last_name: "Wier", school_name: "Brooks Wester Middle School", school_level: "Middle", pay_code: "Y1234")
+    @advisor_users = AdvisorUser.new(username: "advisor@domain.com",
+                                     password: "password",
+                                     first_name: "Jake", last_name: "Wier",
+                                     school_name: "Brooks Wester Middle School",
+                                     school_level: "Middle",
+                                     pay_code: "Y1234")
   end
 
   test "Should Be Valid" do
@@ -90,16 +95,4 @@ class AdvisorUserTest < ActiveSupport::TestCase
     @advisor_users.save
     assert_not duplicate_user.valid?
   end
-
-  test "password should not equal password_confirmation" do
-    @advisor_users.password_confirmation = "thisisnotmypassword"
-    assert_not @advisor_users.valid?
-  end
-
-
-  test "password should have a minimum length" do
-    @advisor_users.password = @advisor_users.password_confirmation = "a" * 5
-    assert_not @advisor_users.valid?
-  end
-
 end
