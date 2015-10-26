@@ -7,7 +7,7 @@ class AdvisorController < ApplicationController
     team_params = {
         :team_name => params[:teamname],
         :team_code => new_team_code,
-        :advisor_users_id => current_user.id,
+        :advisor_user_id => current_user.id,
     }
     team = Team.new(team_params)
     team.save
