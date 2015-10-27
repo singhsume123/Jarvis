@@ -6,8 +6,9 @@ class JoinTeamController < ApplicationController
   def parse_comments
     team_code = params['team_code']
 	
-	result = AdvisorUser.where(team_code: team_code).take	
-	
+	# result = AdvisorUser.where(team_code: team_code).take
+	result = Team.find_by(team_code: team_code)
+
 	if(result == nil) 
 		session[:team_code_valid] = false
 		redirect_to join_team_index_path
