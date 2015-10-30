@@ -18,7 +18,12 @@ class StudentUsersControllerTest < ActionController::TestCase
 
   test "should create student_user" do
     assert_difference('StudentUser.count') do
-      post :create, student_user: { first_name: @student_user.first_name, last_name: @student_user.last_name, pay_code: @student_user.pay_code, school_level: @student_user.school_level, school_name: @student_user.school_name, team_name: @student_user.team_name }
+      post :create, student_user: { first_name: @student_user.first_name,
+                                    last_name: @student_user.last_name,
+                                    pay_code: @student_user.pay_code,
+                                    school_level: @student_user.school_level,
+                                    school_name: @student_user.school_name,
+                                    team_name: @student_user.team_name }
     end
 
     assert_redirected_to student_user_path(assigns(:student_user))
@@ -35,7 +40,12 @@ class StudentUsersControllerTest < ActionController::TestCase
   end
 
   test "should update student_user" do
-    patch :update, id: @student_user, student_user: { first_name: @student_user.first_name, last_name: @student_user.last_name, pay_code: @student_user.pay_code, school_level: @student_user.school_level, school_name: @student_user.school_name, team_name: @student_user.team_name }
+    patch :update, id: @student_user, student_user: { first_name: @student_user.first_name,
+                                                      last_name: @student_user.last_name,
+                                                      pay_code: @student_user.pay_code,
+                                                      school_level: @student_user.school_level,
+                                                      school_name: @student_user.school_name,
+                                                      team_name: @student_user.team_name }
     assert_redirected_to student_user_path(assigns(:student_user))
   end
 
