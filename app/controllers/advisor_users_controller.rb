@@ -20,7 +20,7 @@ class AdvisorUsersController < ApplicationController
   # GET /advisor_users/1/edit
   def edit
   end
-
+#Generates a random pay code and checks if it exists in the database
   def genPayCode(seed)
     num = seed.to_i + rand(1000...900000)
     retcode = 'Y' + num.to_s
@@ -39,6 +39,7 @@ class AdvisorUsersController < ApplicationController
   
   # POST /advisor_users
   # POST /advisor_users.json
+# Creates advisor user based on the parameters and redirects to the advisor home page
   def create
     @advisor_user = AdvisorUser.new(advisor_user_params)
 
@@ -58,6 +59,7 @@ class AdvisorUsersController < ApplicationController
     end
   end
 
+#Updates the advisor parameters based on the changes and throws out errors for invalid entries
   # PATCH/PUT /advisor_users/1
   # PATCH/PUT /advisor_users/1.json
   def update
@@ -74,6 +76,7 @@ class AdvisorUsersController < ApplicationController
 
   # DELETE /advisor_users/1
   # DELETE /advisor_users/1.json
+#Deletes the advisor user entry
   def destroy
     @advisor_user.destroy
     if current_user

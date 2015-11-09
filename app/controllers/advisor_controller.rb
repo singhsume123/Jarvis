@@ -1,7 +1,7 @@
 class AdvisorController < ApplicationController
   def index
   end
-
+#Creates a team based on id of advisor. Updates attributes of advisor and redirects to Advisor homepage
   def create_team
     new_team_code = genTeamCode(current_user.id)
     team_params = {
@@ -18,7 +18,7 @@ class AdvisorController < ApplicationController
     flash.now[:flash] = 'Team Created'
     render '/advisor/index'
   end
-
+#Generates a random pay code and checks if it exists in the database
   def genTeamCode(seed)
     existing_pay_code="T"
     num = seed.to_i + rand(10000...900000)

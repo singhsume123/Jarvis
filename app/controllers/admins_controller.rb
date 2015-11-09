@@ -1,6 +1,5 @@
 class AdminsController < ApplicationController
   before_action :set_advisor_user, only: [:show, :edit, :update, :destroy, :editlogin, :changelogin, :changepassword, :editpassword]
-
   def index
     @admin = Admin.all
   end
@@ -27,6 +26,7 @@ class AdminsController < ApplicationController
     
   end
 
+#Creates admin data based on the admin parameters and redirects to admin home page 
   def create
     @admin = Admin.new(admin_params)
 
@@ -43,6 +43,7 @@ class AdminsController < ApplicationController
     end
   end
 
+#Updates admin username based on the changes and redirects to admin home page 
   def update
     respond_to do |format|
       if @admin.update_attribute(:name , params[:admin][:name]) | @admin.update_attribute(:right_sig_url , params[:admin][:right_sig_url]) |
@@ -60,6 +61,7 @@ class AdminsController < ApplicationController
     end
   end
 
+#Updates admin email data based on the changes and redirects to admin home page.Throws out errors for invalid entries
   def changelogin
     respond_to do |format|
       if @admin.update_attribute(:email, params[:admin][:email])
@@ -85,6 +87,7 @@ class AdminsController < ApplicationController
     end
   end
 
+#Delete the admin
   def destroy
     @admin.destroy
   end
