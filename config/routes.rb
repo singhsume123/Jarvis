@@ -38,6 +38,10 @@ Rails.application.routes.draw do
   #put 'changeadminlogin/:id' => 'admins#changelogin'
   #patch 'changeadminlogin/:id' => 'admins#changelogin'
 
+  get 'sessions/admin_new'
+  get 'admin/log_out' => 'sessions#log_out'
+
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

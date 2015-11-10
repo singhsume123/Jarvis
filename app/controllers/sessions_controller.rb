@@ -1,5 +1,25 @@
+require 'casclient'
+require 'casclient/frameworks/rails/filter'
+
 class SessionsController < ApplicationController
+  before_action CASClient::Frameworks::Rails::Filter, :except => [:create, :new]
+
   def new
+  end
+
+  def admin_new
+    @email = session[:cas_user] + "@tamu.edu"
+    admin = Admin.where(:email => @email).first()
+    if admin.nil?
+      flash.now[:flash] = 'Invalid Admin user name and password'
+      CASClient::Frameworks::Rails::Filter.logout(self)
+    else
+      render 'admins/home'
+    end
+  end
+
+  def log_out
+    CASClient::Frameworks::Rails::Filter.logout(self)
   end
 
   # Creates session.

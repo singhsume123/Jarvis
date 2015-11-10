@@ -1,9 +1,7 @@
-<% if admin_logged_in? %>
-
 <a href="/admins/see_info">
 	Advisor & Student Information
 </a>
-<br></br>
-<p>Want to change info? <%= link_to "Click Here!", admin_path(Admin.first) %></p>
 
-<% end %>
+<%= button_to "Logout", admin_log_out_path, :method => "get" %>
+
+

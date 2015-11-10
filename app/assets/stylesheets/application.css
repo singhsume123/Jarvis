@@ -344,6 +344,13 @@
   margin-right:auto;
 }
 
+#admin_button{
+    margin-right:auto;
+    margin-left:auto;
+    width:802px;
+    padding-top: 10px;
+}
+
 #other_button_right{ 
   margin-right:0px;
 }

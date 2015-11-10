@@ -5,7 +5,7 @@ gem 'simplecov', :require => false, :group => :test
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # THis is used for Heroku
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
@@ -30,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
+
+gem 'rubycas-client', :git => 'git://github.com/rubycas/rubycas-client.git'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
