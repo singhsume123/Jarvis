@@ -1,3 +1,4 @@
+#Admin class
 class Admin < ActiveRecord::Base
 
   before_save { self.email = email.downcase }

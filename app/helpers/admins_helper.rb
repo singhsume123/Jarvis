@@ -4,6 +4,7 @@ module AdminsHelper
     session[:user_id] = user.id
   end
 
+  # find current user in this session
   def admin_current_user
     @admin_current_user ||= Admin.find_by(id: session[:user_id])
   end

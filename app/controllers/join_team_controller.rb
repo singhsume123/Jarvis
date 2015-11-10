@@ -2,7 +2,10 @@ class JoinTeamController < ApplicationController
   def index
   end
   
-  
+  # get the team code
+	# check if team code exists in database
+	# if it exists, redirect to new student user path
+	# if not, throw an error stating invalid team code
   def parse_comments
     team_code = params['team_code']
 	

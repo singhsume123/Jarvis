@@ -26,7 +26,10 @@ class AdminsController < ApplicationController
     
   end
 
-#Creates admin data based on the admin parameters and redirects to admin home page 
+  #Creates admin data based on the admin parameters and redirects to admin home page
+  # Admin parameters :
+  # identifiers : name,email,phone,fax.
+  # urls : right_sig_url,mkt_place_url
   def create
     @admin = Admin.new(admin_params)
 
@@ -43,7 +46,8 @@ class AdminsController < ApplicationController
     end
   end
 
-#Updates admin username based on the changes and redirects to admin home page 
+  #Updates admin username based on the changes and redirects to admin home page
+  # updates other admin attributes - identifiers and urls.
   def update
     respond_to do |format|
       if @admin.update_attribute(:name , params[:admin][:name]) | @admin.update_attribute(:right_sig_url , params[:admin][:right_sig_url]) |
@@ -61,7 +65,8 @@ class AdminsController < ApplicationController
     end
   end
 
-#Updates admin email data based on the changes and redirects to admin home page.Throws out errors for invalid entries
+  # Updates admin email data based on the changes and redirects to admin home page.
+  # Throws out errors for invalid entries
   def changelogin
     respond_to do |format|
       if @admin.update_attribute(:email, params[:admin][:email])
@@ -75,6 +80,7 @@ class AdminsController < ApplicationController
     end
   end
 
+  #Changes password, password must be 6 characters long and match confirmation
   def changepassword
     respond_to do |format|
      if @admin.update(admin_params)

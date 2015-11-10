@@ -2,6 +2,10 @@ class PaymentController < ApplicationController
   def index
   end
 
+	# Checks paycode.
+	# Retrieves advisor user based on pay_code
+	# if no advisor user exists, redirect to payment path
+	# show error Pay Code was invalid.
   def checkpay
     pay_code = params['pay_code']
 	

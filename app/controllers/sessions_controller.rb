@@ -2,6 +2,12 @@ class SessionsController < ApplicationController
   def new
   end
 
+  # Creates session.
+  # Searches for admin based on session email.
+  # Authenticates using email & password stored in session.
+  # If not authenticated, show : invalid email/password combination
+  # If Admin does not exist based on session email, retrieve advisor user
+  # with that email and authenticate based on email/password combination
   def create
     user = Admin.find_by(email: params[:session][:email].downcase)
     #if params[:session][:email] && params[:session][:email].downcase=="admin@admin.com"
