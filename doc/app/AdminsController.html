@@ -147,7 +147,7 @@
 
           
           <div class="method-source-code" id="advisor_edit_method-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">advisor_edit_method</span>
   
 <span class="ruby-keyword">end</span></pre>
@@ -174,13 +174,14 @@
 
         <div class="method-description">
           
-          
+          <p>Updates admin email data based on the changes and redirects to admin home
+page. Throws out errors for invalid entries</p>
           
           
 
           
           <div class="method-source-code" id="changelogin-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 64</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">changelogin</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:email</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:admin</span>][<span class="ruby-value">:email</span>])
@@ -216,13 +217,13 @@
 
         <div class="method-description">
           
-          
+          <p>Changes password, password must be 6 characters long and match confirmation</p>
           
           
 
           
           <div class="method-source-code" id="changepassword-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 77</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 84</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">changepassword</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">admin_params</span>)
@@ -257,13 +258,18 @@
 
         <div class="method-description">
           
-          <p>Declares an admin based on params.</p>
+          <p>Creates admin data based on the admin parameters and redirects to admin
+home page</p>
+
+<pre>Admin parameters :
+identifiers : name,email,phone,fax.
+urls : right_sig_url,mkt_place_url</pre>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 31</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">admin_params</span>)
 
@@ -302,13 +308,13 @@
 
         <div class="method-description">
           
-          
+          <p>Delete the admin</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 89</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 97</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">destroy</span>
 <span class="ruby-keyword">end</span></pre>
@@ -341,7 +347,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -373,7 +379,7 @@
 
           
           <div class="method-source-code" id="editlogin-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 18</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">editlogin</span>
   <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;admins/changelogin&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -406,7 +412,7 @@
 
           
           <div class="method-source-code" id="editpassword-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">editpassword</span>
   <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;admins/changepassword&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -439,7 +445,7 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -472,7 +478,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 8</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -505,7 +511,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -531,13 +537,16 @@
 
         <div class="method-description">
           
-          
+          <p>Updates admin username based on the changes and redirects to admin home
+page</p>
+
+<pre>updates other admin attributes - identifiers and urls.</pre>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 47</span>
+            <pre><span class="ruby-comment"># File app/controllers/admins_controller.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:name</span> , <span class="ruby-identifier">params</span>[<span class="ruby-value">:admin</span>][<span class="ruby-value">:name</span>]) <span class="ruby-operator">|</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:right_sig_url</span> , <span class="ruby-identifier">params</span>[<span class="ruby-value">:admin</span>][<span class="ruby-value">:right_sig_url</span>]) <span class="ruby-operator">|</span>

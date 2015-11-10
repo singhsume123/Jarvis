@@ -121,13 +121,14 @@
 
         <div class="method-description">
           
-          
+          <p>Checks paycode. Retrieves advisor user based on pay_code if no advisor user
+exists, redirect to payment path show error Pay Code was invalid.</p>
           
           
 
           
           <div class="method-source-code" id="checkpay-source">
-            <pre><span class="ruby-comment"># File app/controllers/payment_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/payment_controller.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">checkpay</span>
   <span class="ruby-identifier">pay_code</span> = <span class="ruby-identifier">params</span>[<span class="ruby-string">&#39;pay_code&#39;</span>]
       

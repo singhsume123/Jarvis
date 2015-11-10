@@ -137,7 +137,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 29</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@student_user</span> = <span class="ruby-constant">StudentUser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">student_user_params</span>)
 
@@ -184,7 +184,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 63</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@student_user</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -221,7 +221,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 24</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -247,13 +247,13 @@
 
         <div class="method-description">
           
-          <p>GET /student_users.json</p>
+          <p>GET /student_users GET /student_users.json</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@student_users</span> = <span class="ruby-constant">StudentUser</span>.<span class="ruby-identifier">all</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -291,7 +291,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 19</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@student_user</span> = <span class="ruby-constant">StudentUser</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -324,7 +324,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -356,7 +356,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/student_users_controller.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@student_user</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">student_user_params</span>)

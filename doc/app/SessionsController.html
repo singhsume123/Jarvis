@@ -123,13 +123,17 @@
 
         <div class="method-description">
           
-          
+          <p>Creates session. Searches for admin based on session email. Authenticates
+using email &amp; password stored in session. If not authenticated, show :
+invalid email/password combination If <a href="Admin.html">Admin</a> does
+not exist based on session email, retrieve advisor user with that email and
+authenticate based on email/password combination</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-identifier">user</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:session</span>][<span class="ruby-value">:email</span>].<span class="ruby-identifier">downcase</span>)
   <span class="ruby-comment">#if params[:session][:email] &amp;&amp; params[:session][:email].downcase==&quot;admin@admin.com&quot;</span>
@@ -186,7 +190,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

@@ -123,13 +123,16 @@
 
         <div class="method-description">
           
-          
+          <p>Creates a team based on id of advisor.</p>
+
+<pre>Updates attributes of advisor and redirects to Advisor homepage
+team - team name, team code and advisor user id</pre>
           
           
 
           
           <div class="method-source-code" id="create_team-source">
-            <pre><span class="ruby-comment"># File app/controllers/advisor_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/advisor_controller.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_team</span>
   <span class="ruby-identifier">new_team_code</span> = <span class="ruby-identifier">genTeamCode</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>)
   <span class="ruby-identifier">team_params</span> = {
@@ -145,7 +148,6 @@
 
   <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:flash</span>] = <span class="ruby-string">&#39;Team Created&#39;</span>
   <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;/advisor/index&#39;</span>
-  <span class="ruby-keyword">return</span> <span class="ruby-identifier">team</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -170,13 +172,14 @@
 
         <div class="method-description">
           
-          
+          <p>Generates a random pay code and checks if it exists in the database if it
+exists generate the next paycode</p>
           
           
 
           
           <div class="method-source-code" id="genTeamCode-source">
-            <pre><span class="ruby-comment"># File app/controllers/advisor_controller.rb, line 23</span>
+            <pre><span class="ruby-comment"># File app/controllers/advisor_controller.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">genTeamCode</span>(<span class="ruby-identifier">seed</span>)
   <span class="ruby-identifier">existing_pay_code</span>=<span class="ruby-string">&quot;T&quot;</span>
   <span class="ruby-identifier">num</span> = <span class="ruby-identifier">seed</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">10000</span><span class="ruby-operator">...</span><span class="ruby-value">900000</span>)

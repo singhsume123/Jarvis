@@ -13,11 +13,11 @@ class AdminsController < ApplicationController
 
   def edit
   end
-
+  # redirects to admins/changelogin
   def editlogin
     render 'admins/changelogin'
   end
-
+  # renders admins/changepassword
   def editpassword
     render 'admins/changepassword'
   end
@@ -66,7 +66,7 @@ class AdminsController < ApplicationController
   end
 
   # Updates admin email data based on the changes and redirects to admin home page.
-  # Throws out errors for invalid entries
+  # Throws out error "Email Invalid" for invalid entries (not following standard template user@domain.com)
   def changelogin
     respond_to do |format|
       if @admin.update_attribute(:email, params[:admin][:email])

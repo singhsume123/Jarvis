@@ -133,13 +133,14 @@
 
         <div class="method-description">
           
-          <p>POST /advisor_users POST /advisor_users.json</p>
+          <p>POST /advisor_users POST /advisor_users.json Creates advisor user based on
+the parameters and redirects to the advisor home page</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@advisor_user</span> = <span class="ruby-constant">AdvisorUser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">advisor_user_params</span>)
 
@@ -181,13 +182,16 @@
 
         <div class="method-description">
           
-          <p>DELETE /advisor_users/1 DELETE /advisor_users/1.json</p>
+          <pre>DELETE /advisor_users/1
+DELETE /advisor_users/1.json</pre>
+
+<p>Deletes the advisor user entry</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 77</span>
+            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@advisor_user</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>
@@ -258,7 +262,7 @@
 
         <div class="method-description">
           
-          
+          <p>Generates a random pay code and checks if it exists in the database</p>
           
           
 
@@ -401,13 +405,17 @@
 
         <div class="method-description">
           
-          <p>PATCH/PUT /advisor_users/1 PATCH/PUT /advisor_users/1.json</p>
+          <p>Updates the advisor parameters based on the changes and throws out errors
+for invalid entries</p>
+
+<pre>PATCH/PUT /advisor_users/1
+PATCH/PUT /advisor_users/1.json</pre>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 63</span>
+            <pre><span class="ruby-comment"># File app/controllers/advisor_users_controller.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@advisor_user</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">advisor_user_params</span>)
