@@ -80,6 +80,20 @@ class AdminsController < ApplicationController
     end
   end
 
+  # Mark the student as paid.
+  def mark_paid
+    @student_user = StudentUser.find(params[:id])
+    @student_user.pay_status = "yes"
+    @student_user.save!
+    render 'admins/see_info'
+  end
+
+  def send_email
+    @student_user = StudentUser.find(params[:id])
+    UserMailer.welcome_email(@student_user.email).deliver_now
+    render 'admins/see_info'
+  end
+
   #Changes password, password must be 6 characters long and match confirmation
   def changepassword
     respond_to do |format|

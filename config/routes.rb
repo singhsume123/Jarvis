@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   get 'admins/see_info'
 
+
+  post 'admins/mark_paid' => 'admins#mark_paid'
+  post 'admins/send_email' => 'admins#send_email'
+
   resources :admins do
 	member do
 	  put 'changelogin' => 'admins#changelogin'
