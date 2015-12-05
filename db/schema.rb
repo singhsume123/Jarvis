@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20161203113000) do
   create_table "advisor_users", force: :cascade do |t|
     t.string   "username"
     t.string   "password"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "school_name"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20161203113000) do
     t.string   "team_name"
     t.string   "team_code"
     t.string   "usertype"
-    t.string   "password_digest"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -77,7 +76,7 @@ ActiveRecord::Schema.define(version: 20161203113000) do
   create_table "teams", force: :cascade do |t|
     t.string  "team_name"
     t.string  "team_code"
-    t.integer "advisor_user_id"
+    t.integer "advisor_users_id"
   end
 
 end
