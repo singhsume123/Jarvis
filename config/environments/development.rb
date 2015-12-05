@@ -22,7 +22,7 @@ Rails.application.configure do
       port: 587,
       domain: 'spark.com',
       user_name: 'ankurgupta8907',
-      password: 'Iiit4321',
+      password: 'sparkRocks1',
       authentication: 'plain',
       enable_starttls_auto: true}
 
