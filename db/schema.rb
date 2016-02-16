@@ -13,8 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161203113000) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -79,8 +77,7 @@ ActiveRecord::Schema.define(version: 20161203113000) do
   create_table "teams", force: :cascade do |t|
     t.string  "team_name"
     t.string  "team_code"
-    t.integer "advisor_user_id"
+    t.integer "advisor_users_id"
   end
-
-  add_foreign_key "teams", "advisor_users"
+  
 end
